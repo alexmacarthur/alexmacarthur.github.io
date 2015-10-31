@@ -1,0 +1,24 @@
+.Main--home {
+	text-align: center;
+}
+
+.social-list {	
+	background: black;
+	list-style: none;
+	display: inline-block;
+    padding: 1rem 1.25rem;
+}
+
+.social-item {
+	display: inline;
+	text-align: center;
+    margin-right: 1rem;
+
+    &:last-child {
+    	margin-right: 0;
+    }
+	
+	a {
+		color: white;
+	}
+}
