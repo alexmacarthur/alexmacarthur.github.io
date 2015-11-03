@@ -2,14 +2,18 @@
 	text-align: center;
 }
 
-.social-list {	
+.HomeHeader {
+	margin-bottom: 0;
+}
+
+.Nav {	
 	background: black;
 	list-style: none;
 	display: inline-block;
     padding: 1rem 1.25rem;
 }
 
-.social-item {
+.Nav-item {
 	display: inline;
 	text-align: center;
     margin-right: 1rem;

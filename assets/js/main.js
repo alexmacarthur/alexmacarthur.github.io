@@ -1,6 +1,6 @@
 $('.HomeHeader').typeIt({
-	typeSpeed: 150,
-  	whatToType: "Alex MacArthur"
+	typeSpeed: 125,
+  	whatToType: ["Hi, I'm Alex.", "Sup."]
 });
 
 (function(){
