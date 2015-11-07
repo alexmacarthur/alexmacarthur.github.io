@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var jshint = require('gulp-jshint');
-var uglify = require('gulp-uglify');
-var autoprefix = require('gulp-autoprefixer');
-var sass = require('gulp-sass');
-var rename = require("gulp-rename");
-var concat = require('gulp-concat');
+var gulp        = require('gulp');
+var jshint      = require('gulp-jshint');
+var uglify      = require('gulp-uglify');
+var autoprefix  = require('gulp-autoprefixer');
+var sass        = require('gulp-sass');
+var rename      = require("gulp-rename");
+var concat      = require('gulp-concat');
 var jekyll      = process.platform === "win32" ? "jekyll.bat" : "jekyll";
 var browserSync = require('browser-sync');
 var ghPages     = require('gulp-gh-pages');
@@ -44,9 +44,9 @@ gulp.task('jshint',function(){
 
 // concat and minify our JavaScript
 gulp.task('scripts', function() {
-  gulp.src(['assets/js/typeit.js','assets/js/main.js'])
+  gulp.src(['assets/js/typeit.js','assets/js/scrollify.js','assets/js/main.js'])
     .pipe(concat('scripts.js'))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('assets/js'));
 });
 

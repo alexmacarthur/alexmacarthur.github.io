@@ -5,10 +5,9 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-title: Alex MacArthur
+title: Alex MacArthur | Nashville Web Developer
 email: alex@macarthur.me
-description: > # this means to ignore newlines until "baseurl:"
-  Alex MacArthur's site.
+description: "Alex is a front-end developer from MN, relocated to Nashville, TN."
 baseurl: "" 
 url: "alexmacarthur.github.io" 
 twitter_username: amacarthur

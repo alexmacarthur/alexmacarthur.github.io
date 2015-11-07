@@ -2,15 +2,14 @@
 layout: default
 ---
 
-<main class="Main--home">
+<main class="HomeSection HomeSection--main" id="top">
+  <small id="TopSectionCheck"></small>
 
-  <div class="container">
+  <div class="HomeSection--main-container">
 
     <h1 class="HomeHeader"></h1>
 
-    <br>
-
-<!--     <ul class="Nav--social">
+    <ul class="Nav Nav--social">
       <li class="Nav-item">
         <a href="http://github.com/alexmacarthur"><i class="fa fa-github"></i></a>
       </li>
@@ -20,15 +19,38 @@ layout: default
       <li class="Nav-item">
         <a href="http://www.linkedin.com/in/alexmacarthur"><i class="fa fa-linkedin"></i></a>
       </li>
-    </ul> -->
-
-    <ul class="Nav">
-      <li class="Nav-item"><a href="#about">About</a></li>
-      <li class="Nav-item"><a href="#about">Projects</a></li>
-      <li class="Nav-item"><a href="#about">Contact</a></li>
     </ul>
 
+    <div class="SectionsNav">
+      <a class="SectionsNav-link" href="#top" onclick="return scrollTo(1);">Top</a>
+      <a class="SectionsNav-link" href="#about" onclick="return scrollTo(2);">About</a>
+      <a class="SectionsNav-link" href="#work" onclick="return scrollTo(3);">Work</a>
+    </div>
 
   <div>
 
 </main>
+
+<section class="HomeSection HomeSection--about" id="about">
+  <small id="AboutSectionCheck"></small>
+
+  <div class="HomeSection--container">
+    <p>
+      I'm a front-end developing, Minnesota transplant in Nashville, TN. I have a beautiful wife and daughter, enjoy to run, and I have opinions.
+    </p>
+  </div>
+
+</section>
+
+<section class="HomeSection HomeSection--work" id="work">
+  <small id="WorkSectionCheck"></small>
+
+
+</section>
+
+<footer>
+
+
+
+</footer>
+

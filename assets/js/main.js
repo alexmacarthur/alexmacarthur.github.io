@@ -1,9 +1,21 @@
-$('.HomeHeader').typeIt({
-	typeSpeed: 125,
-  	whatToType: ["Hi, I'm Alex.", "Sup."]
+$(document).ready(function(){
+	$('.HomeSection').css('height',$(window).height());
+
+	$('.HomeHeader').typeIt({
+		typeSpeed: 125,
+	  	whatToType: ["Hi, I'm Alex MacArthur."]
+	});
+
+	$.scrollify({
+	    section : ".HomeSection"
+	});
+
+	$(window).scroll(function() {
+		$('.SectionsNav-link').css('font-weight','');
+	})
+
 });
 
-(function(){
-	var newMargin = ($(window).height() - $('.HomeHeader').height()) / 3;
-	$('.HomeHeader').css('margin-top', newMargin);
-})();
+function scrollTo(section){
+	$.scrollify.move("#"+section);
+}
