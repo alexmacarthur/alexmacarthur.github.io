@@ -44,7 +44,7 @@ gulp.task('jshint',function(){
 
 // concat and minify our JavaScript
 gulp.task('scripts', function() {
-  gulp.src(['assets/js/typeit.js','assets/js/scrollify.js','assets/js/main.js'])
+  gulp.src(['assets/js/typeit.js','assets/js/scrollify.js','assets/js/main.js','assets/js/fracs.js'])
     .pipe(concat('scripts.js'))
     .pipe(uglify())
     .pipe(gulp.dest('assets/js'));

@@ -1,5 +1,9 @@
+var viewportHeight = $(window).height();
+
 $(document).ready(function(){
-	$('.HomeSection').css('height',$(window).height());
+	var splitHeight = viewportHeight/$('.HomeSection').length;
+
+	$('.HomeSection').css('height',viewportHeight);
 
 	$('.HomeHeader').typeIt({
 		typeSpeed: 125,
@@ -12,10 +16,26 @@ $(document).ready(function(){
 
 	$(window).scroll(function() {
 		$('.SectionsNav-link').css('font-weight','');
-	})
+	});
 
+	screenSwitch();
 });
 
 function scrollTo(section){
 	$.scrollify.move("#"+section);
+}
+
+function screenSwitch(){
+
+	var sections = $('.HomeSection');
+
+	$.each(sections, function( index, value ) {
+		  console.log('hi');
+		});
+
+	var fracs = $('.HomeSection').fracs();
+	console.log(fracs);
+
+
+
 }
