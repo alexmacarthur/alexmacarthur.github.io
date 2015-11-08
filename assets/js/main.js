@@ -15,27 +15,28 @@ $(document).ready(function(){
 	});
 
 	$(window).scroll(function() {
-		$('.SectionsNav-link').css('font-weight','');
+		currentMenuLink();
 	});
 
-	screenSwitch();
 });
 
 function scrollTo(section){
 	$.scrollify.move("#"+section);
 }
 
-function screenSwitch(){
+function currentMenuLink(){
 
 	var sections = $('.HomeSection');
+	var mostVisible = $('#top');
+	var mostVisibleID = mostVisible.attr('id');
 
-	$.each(sections, function( index, value ) {
-		  console.log('hi');
-		});
+	// grabs each section and checks for most percentage on screen
+	$.each(sections, function() {
+		mostVisible = $(this).fracs().visible > mostVisible.fracs().visible ? $(this) : mostVisible;
+		mostVisibleID = mostVisible.attr('id');
+	});
 
-	var fracs = $('.HomeSection').fracs();
-	console.log(fracs);
-
-
+	$('.SectionsNav-link').removeClass('active-link');
+	$('.SectionsNav-link[href="#' + mostVisibleID + '"]').addClass('active-link');
 
 }
