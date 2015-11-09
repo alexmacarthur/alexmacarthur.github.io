@@ -21,7 +21,7 @@ gulp.task('build', function (done) {
   .on('close', done);
 });
 
-// rebuild site, 
+// rebuild site,
 gulp.task('rebuild', ['build'], function () {
   browserSync.reload();
 });
@@ -55,7 +55,7 @@ gulp.task('sass',function(){
   gulp.src('assets/scss/style.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefix('last 2 versions'))
-    .pipe(gulp.dest('_site/assets/css'))
+    .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.reload({stream:true}));
 });
 
