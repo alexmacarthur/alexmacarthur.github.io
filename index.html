@@ -12,23 +12,21 @@ layout: default
 
       <hr class="HomeSection-divider"></hr>
 
-      <ul class="Nav Nav--social">
-        <li class="Nav-item">
-          <a href="http://github.com/alexmacarthur"><i class="fa fa-github"></i></a>
-        </li>
-        <li class="Nav-item">
-          <a href="http://www.twitter.com/amacarthur"><i class="fa fa-twitter"></i></a>
-        </li>
-        <li class="Nav-item">
-          <a href="http://www.linkedin.com/in/alexmacarthur"><i class="fa fa-linkedin"></i></a>
-        </li>
+      <ul class="SocialNav SocialNav--featured enter-icons">
+        {% include social-menu.html %}
       </ul>
 
-      <div class="SectionsNav">
+      <div class="SectionsNav SectionsNav--featured">
+        {% include primary-menu.html %}
+      </div>
+
+      <ul class="SocialNav SocialNav--corner is-invisible">
+        {% include social-menu.html %}
+      </ul>
+
+      <div class="SectionsNav SectionsNav--corner is-invisible">
         <a class="SectionsNav-link" href="#top" onclick="return scrollTo(1);">Top</a>
-        <a class="SectionsNav-link" href="#about" onclick="return scrollTo(2);">About</a>
-        <a class="SectionsNav-link" href="#work" onclick="return scrollTo(3);">Work</a>
-        <a class="SectionsNav-link" href="#thoughts" onclick="return scrollTo(4);">Thoughts</a>
+        {% include primary-menu.html %}
       </div>
 
     <div>

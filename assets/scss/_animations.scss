@@ -1,0 +1,20 @@
+.enter-icons {
+	.SocialNav-item {
+		animation: popup 3s;
+
+		@for $i from 1 through 3 {
+		   &:nth-child(#{$i}) {
+		       animation-delay: #{$i}s;
+		   }
+		}
+	}
+}
+
+@keyframes popup {
+	from{
+		bottom: -100%;
+	}
+	to{
+		bottom: 0px;
+	}
+}
