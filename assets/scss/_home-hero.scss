@@ -3,9 +3,13 @@
 	position: relative;
 }
 
+.HomeSection--main {
+	overflow: hidden;
+}
+
 .HomeSection-container {
     padding-top: 3rem;
-	width: 90%;
+		width: 90%;
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
@@ -46,12 +50,12 @@
 .SocialNav-item {
 	display: inline;
 	text-align: center;
-    margin-right: 1rem;
+  margin-right: 1rem;
 
     &:last-child {
     	margin-right: 0;
     }
-	
+
 	a {
 		color: white;
 		border: 0;
@@ -73,10 +77,21 @@
 	transition: all 0.1s ease-in-out;
 }
 
+.SocialNavHolder {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 10px;
+	text-align: center;
+}
+
 .SocialNav--featured {
+	position: relative;
+	width: 100px;
+
 	.SocialNav-item {
 		position: absolute;
-		bottom: -100%;
+		bottom: -150%;
 
 	    &:nth-child(1) {
 	    	left: 0;
@@ -137,4 +152,3 @@
 		color: $pink;
 	}
 }
-

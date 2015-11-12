@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 	$('.HomeHeader').typeIt({
 		typeSpeed: 125,
-	  	whatToType: ["Hi, I'm Alex MacArthur."]
+	  	whatToType: ["test"]
 	});
 
 	$.scrollify({
