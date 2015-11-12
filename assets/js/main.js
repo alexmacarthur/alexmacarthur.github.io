@@ -7,7 +7,9 @@ $(document).ready(function(){
 
 	$('.HomeHeader').typeIt({
 		typeSpeed: 125,
-	  	whatToType: ["test"]
+	  whatToType: ["test"]
+	}, function(){
+		$('.SocialNav-item').addClass('animation-popup');
 	});
 
 	$.scrollify({

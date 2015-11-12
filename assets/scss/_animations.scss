@@ -1,6 +1,5 @@
 .enter-icons {
 	.SocialNav-item {
-		animation: popup .25s ease forwards;
 
 		@for $i from 1 through 3 {
 		   &:nth-child(#{$i}) {
@@ -8,6 +7,10 @@
 		   }
 		}
 	}
+}
+
+.animation-popup {
+	animation: popup .25s ease forwards;
 }
 
 @keyframes popup {
