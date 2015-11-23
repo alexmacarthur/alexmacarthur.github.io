@@ -1,0 +1,39 @@
+.FeatureBlocks {
+	@extend %clearfix;
+	display: block;
+}
+
+.FeatureBlocks-block {
+	list-style: none;
+	display: block;
+	float: left;
+	width: 30%;
+	margin-right: 5%;
+	height: 175px;
+	background: gray;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.FeatureBlocks-block--about {
+
+	&:nth-child(1) {
+		background: url('../img/airport.jpg') no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	&:nth-child(2) {
+		background: url('../img/wedding.jpg') no-repeat;
+		background-size: cover;
+	    background-position: center -10px;
+	}
+
+	&:nth-child(3) {
+		background: url('../img/autumn.jpg') no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}

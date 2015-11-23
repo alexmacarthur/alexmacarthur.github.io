@@ -8,3 +8,30 @@
 	transition: all 0.5s ease-in-out;
 	opacity: 0;
 }
+
+#ContactForm {
+	position: relative;
+}
+
+#StatusMessages {
+	position: relative;
+	max-height: 0;
+    border-radius: 3px;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 100;
+
+	&.success {
+		transition: all .15s ease-in-out;
+		background: rgba($green, .5);
+		max-height: 200px;
+		padding: 1rem;
+	}
+
+	&.failure {
+		transition: all .15s ease-out;
+		background: rgba($red, .5);
+		max-height: 200px;
+		padding: 1rem;
+	}
+}

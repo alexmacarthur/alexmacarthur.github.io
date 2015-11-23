@@ -5,11 +5,18 @@
 
 .HomeSection--main {
 	overflow: hidden;
+
+	.HomeSection-container {
+		padding-top: 15rem;
+	}
+}
+
+.HomeSection-header {
+	padding-top: 5rem;
 }
 
 .HomeSection-container {
-    padding-top: 3rem;
-		width: 90%;
+	width: 90%;
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
@@ -20,6 +27,10 @@
     max-width: 500px;
     width: 90%;
     margin: 3rem auto;
+}
+
+.HomeSection-description {
+    margin-bottom: 4rem;
 }
 
 .SectionTitle {
