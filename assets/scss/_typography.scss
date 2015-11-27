@@ -10,3 +10,13 @@ a{
 	color: $pink;
 	border-bottom: 2px solid rgba($pink, .6);
 }
+
+p, 
+li,
+a {
+	font-family: 'Merriweather', serif;
+}
+
+p {
+    line-height: 2.5rem;
+}

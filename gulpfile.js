@@ -61,7 +61,7 @@ gulp.task('sass',function(){
 
 // watch for changes & stuff
 gulp.task('watch', function () {
-  gulp.watch('assets/scss/*.scss', ['sass', 'rebuild']);
+  gulp.watch('assets/scss/**/*.scss', ['sass', 'rebuild']);
   gulp.watch(['index.html', '_layouts/*', '_includes/*', '_posts/*', '_drafts/*'], ['rebuild']);
   gulp.watch('assets/js/*', ['scripts','rebuild']);
 });

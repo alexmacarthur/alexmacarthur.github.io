@@ -8,10 +8,12 @@ html {
 
 body {
   font-size: 1.6rem;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 ul {
 	padding: 0;
+	list-style: none;
 }
 
 a {

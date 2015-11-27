@@ -17,7 +17,7 @@
 
 .HomeSection-container {
 	width: 90%;
-    max-width: 500px;
+	max-width: 500px;
     margin: 0 auto;
     text-align: center;
 }
@@ -29,9 +29,12 @@
     margin: 3rem auto;
 }
 
-.HomeSection-description {
+.DescriptionHolder {
+	@extend %clearfix;
     margin-bottom: 4rem;
 }
+
+
 
 .SectionTitle {
 	position: absolute;
