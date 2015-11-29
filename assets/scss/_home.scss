@@ -22,6 +22,10 @@
     text-align: center;
 }
 
+.HomeSection-container--wide {
+	max-width: 100%;
+}
+
 .HomeSection-divider {
 	border: 2px dashed rgba(black, .1);
     max-width: 500px;
@@ -33,8 +37,6 @@
 	@extend %clearfix;
     margin-bottom: 4rem;
 }
-
-
 
 .SectionTitle {
 	position: absolute;
@@ -165,4 +167,64 @@
 		opacity: 1;
 		color: $pink;
 	}
+}
+
+.TechList {
+	text-align: center;
+}
+
+.TechList-item {
+	display: inline;
+    padding: 0 1rem;
+    line-height: 3rem;
+    font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+
+	&:before {
+		padding-right: 0.45rem;
+		font: normal normal normal 14px/1 FontAwesome;
+	    content: "\f00c";
+	}
+}
+
+.WorkList {
+	@extend %clearfix;
+	position: relative;
+	padding-bottom: 100%;
+	//overflow: hidden;
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+$project-list: 'marshallRadio' 'tilgry' ' lyonCountyRepublicans' 'lifewall' 'typeit';
+
+.WorkList-item {
+	@extend %clearfix;
+	display: inline-block;
+	position: absolute;
+	width: 33.33333%;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:first-child {
+		left: 0;
+	}
+
+	@each $current-project in $project-list {
+	    $i: index($project-list, $current-project);
+	    &:nth-child(#{$i+1}n) { 
+	        left: $i*33.33333%;
+	    }
+	}
+}
+
+.WorkList-description {
+	font-size: 1.25rem;
+    line-height: 2rem;
 }

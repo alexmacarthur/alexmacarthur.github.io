@@ -53,7 +53,7 @@ gulp.task('scripts', function() {
 // compile sass, reload browser
 gulp.task('sass',function(){
   gulp.src('assets/scss/style.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass({outputStyle: 'expanded'}))
     .pipe(autoprefix('last 2 versions'))
     .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.reload({stream:true}));
