@@ -199,32 +199,3 @@
 		clear: both;
 	}
 }
-
-$project-list: 'marshallRadio' 'tilgry' ' lyonCountyRepublicans' 'lifewall' 'typeit';
-
-.WorkList-item {
-	@extend %clearfix;
-	display: inline-block;
-	position: absolute;
-	width: 33.33333%;
-
-	&:last-child {
-		margin-right: 0;
-	}
-
-	&:first-child {
-		left: 0;
-	}
-
-	@each $current-project in $project-list {
-	    $i: index($project-list, $current-project);
-	    &:nth-child(#{$i+1}n) { 
-	        left: $i*33.33333%;
-	    }
-	}
-}
-
-.WorkList-description {
-	font-size: 1.25rem;
-    line-height: 2rem;
-}

@@ -27,10 +27,16 @@ $(document).ready(function(){
 		currentMenuLink();
 	});
 
+	$('.WorkList').slick({
+	  infinite: false,
+	  slidesToShow: 3,
+	  slidesToScroll: 3
+	});
+
 	$('#ContactForm').submit(function(e){
 		e.preventDefault();
 		$.ajax({
-		    url: "//formspree.io/alex@macarthur.me", 
+		    url: "//formspree.io/alex@macarthur.me",
 		    method: "POST",
 		    data: {message: "hello!"},
 		    dataType: "json"

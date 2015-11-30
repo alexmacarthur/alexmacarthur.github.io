@@ -415,7 +415,7 @@ th {
   padding: 0;
 }
 
-.DescriptionHolder:after, .WorkList:after, .WorkList-item:after {
+.DescriptionHolder:after, .WorkList:after {
   content: "";
   display: table;
   clear: both;
@@ -753,45 +753,6 @@ p {
   content: '';
   display: table;
   clear: both;
-}
-
-.WorkList-item {
-  display: inline-block;
-  position: absolute;
-  width: 33.33333%;
-}
-
-.WorkList-item:last-child {
-  margin-right: 0;
-}
-
-.WorkList-item:first-child {
-  left: 0;
-}
-
-.WorkList-item:nth-child(2n) {
-  left: 33.33333%;
-}
-
-.WorkList-item:nth-child(3n) {
-  left: 66.66666%;
-}
-
-.WorkList-item:nth-child(4n) {
-  left: 99.99999%;
-}
-
-.WorkList-item:nth-child(5n) {
-  left: 133.33332%;
-}
-
-.WorkList-item:nth-child(6n) {
-  left: 166.66665%;
-}
-
-.WorkList-description {
-  font-size: 1.25rem;
-  line-height: 2rem;
 }
 
 @-webkit-keyframes blink {
