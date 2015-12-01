@@ -537,9 +537,15 @@ h4 {
 }
 
 a {
+  transition: all .1s ease-in-out;
   text-decoration: none;
   color: #E56B70;
   border-bottom: 2px solid rgba(229, 107, 112, 0.6);
+}
+
+a:hover {
+  color: #AD1F23;
+  border-color: #AD1F23;
 }
 
 p,
@@ -575,7 +581,7 @@ p {
 
 .HomeSection-container {
   width: 90%;
-  max-width: 500px;
+  max-width: 960px;
   margin: 0 auto;
   text-align: center;
 }
@@ -746,13 +752,17 @@ p {
 
 .WorkList {
   position: relative;
-  padding-bottom: 100%;
 }
 
 .WorkList:after {
   content: '';
   display: table;
   clear: both;
+}
+
+.WorkList-item:focus {
+  border: 0;
+  outline: 0;
 }
 
 @-webkit-keyframes blink {

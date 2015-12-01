@@ -30,7 +30,9 @@ $(document).ready(function(){
 	$('.WorkList').slick({
 	  infinite: false,
 	  slidesToShow: 3,
-	  slidesToScroll: 3
+	  slidesToScroll: 3,
+		prevArrow: $('#slickPrevious'),
+    nextArrow: $('#slickNext'),
 	});
 
 	$('#ContactForm').submit(function(e){
@@ -41,17 +43,16 @@ $(document).ready(function(){
 		    data: {message: "hello!"},
 		    dataType: "json"
 		}).done(function(response) {
+      // Clear the form.
+      $('input[name="name"]').val('');
+      $('input[name="_replyto"]').val('');
+      $('textarea[name="message"]').val('');
 
-            // Clear the form.
-            $('input[name="name"]').val('');
-            $('input[name="_replyto"]').val('');
-            $('textarea[name="message"]').val('');
-
-            $('.ContactForm-submit').prop('disabled', true);
-            $('#StatusMessages').html('Your message was successfully sent! Thanks.').removeClass('failure').addClass('success');
-        }).fail(function(data) {
-        	$('#StatusMessages').html('Sorry, an something\'s messed up. Refresh the page to try again, or just send an email to alex@macarthur.me.').removeClass('success').addClass('failure');
-        });
+      $('.ContactForm-submit').prop('disabled', true);
+      $('#StatusMessages').html('Your message was successfully sent! Thanks.').removeClass('failure').addClass('success');
+    }).fail(function(data) {
+    	$('#StatusMessages').html('Sorry, an something\'s messed up. Refresh the page to try again, or just send an email to alex@macarthur.me.').removeClass('success').addClass('failure');
+    });
 	});
 
 });

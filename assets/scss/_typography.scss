@@ -1,4 +1,4 @@
-h1, 
+h1,
 h2,
 h3,
 h4 {
@@ -6,12 +6,18 @@ h4 {
 }
 
 a{
+	transition: all .1s ease-in-out;
 	text-decoration: none;
 	color: $pink;
 	border-bottom: 2px solid rgba($pink, .6);
+
+	&:hover {
+		color: $dark-pink;
+		border-color: $dark-pink;
+	}
 }
 
-p, 
+p,
 li,
 a {
 	font-family: 'Merriweather', serif;

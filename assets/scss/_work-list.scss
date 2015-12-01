@@ -1,0 +1,21 @@
+.WorkList {
+	@extend %clearfix;
+	position: relative;
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.WorkList-item {
+	&:focus {
+		border: 0;
+		outline: 0;
+	}
+}
+
+.SliderButtons-button {
+
+}
