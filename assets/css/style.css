@@ -421,6 +421,10 @@ th {
   clear: both;
 }
 
+.Main--home {
+  text-align: center;
+}
+
 .enter-icons .SocialNav-item:nth-child(1) {
   -webkit-animation-delay: 0.33333s;
           animation-delay: 0.33333s;
@@ -556,10 +560,6 @@ a {
 
 p {
   line-height: 2.5rem;
-}
-
-.Main--home {
-  text-align: center;
 }
 
 .HomeSection {
@@ -760,9 +760,31 @@ p {
   clear: both;
 }
 
+.WorkList-item {
+  padding: 0 1rem;
+}
+
 .WorkList-item:focus {
   border: 0;
   outline: 0;
+}
+
+.SliderButtons li {
+  display: inline;
+}
+
+.SliderButtons li:first-child {
+  margin-right: .75rem;
+}
+
+.SliderButtons-button {
+  border: 0;
+  color: black;
+  cursor: pointer;
+}
+
+.SliderButtons-button i {
+  font-size: 3rem;
 }
 
 @-webkit-keyframes blink {

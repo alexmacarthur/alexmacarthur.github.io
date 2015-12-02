@@ -10,12 +10,30 @@
 }
 
 .WorkList-item {
+	padding: 0 1rem;
+	
 	&:focus {
 		border: 0;
 		outline: 0;
 	}
 }
 
-.SliderButtons-button {
+.SliderButtons {
+	li {
+		display: inline;
 
+		&:first-child {
+			margin-right: .75rem;
+		}
+	}
+}
+
+.SliderButtons-button {
+	border: 0;
+	color: black;
+	cursor: pointer;
+
+	i {
+		font-size: 3rem;
+	}
 }

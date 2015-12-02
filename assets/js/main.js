@@ -5,11 +5,10 @@ $(document).ready(function(){
 
 	$('.HomeSection').css('min-height',viewportHeight);
 
-	(function(){
-		var $homeHeader = $('.HomeSection--main .HomeSection-container');
-		var newPadding = ($(window).height() - $homeHeader.innerHeight())/2;
-		$homeHeader.css('padding-top',newPadding);
-	})()
+	topPadding();
+	$(window).resize(function(){
+		topPadding();
+	});
 
 	$('.HomeHeader').typeIt({
 		typeSpeed: 125,
@@ -33,6 +32,23 @@ $(document).ready(function(){
 	  slidesToScroll: 3,
 		prevArrow: $('#slickPrevious'),
     nextArrow: $('#slickNext'),
+		speed: 100,
+		responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+			}
+		},
+		{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		},
+	]
 	});
 
 	$('#ContactForm').submit(function(e){
@@ -56,6 +72,20 @@ $(document).ready(function(){
 	});
 
 });
+
+function topPadding() {
+	// set top padding for first (main) HomeSection
+	var $homeHeader = $('.HomeSection--main .HomeSection-container');
+	var homeHeaderPadding = ($(window).height() - $homeHeader.height())/2;
+	$homeHeader.css('padding-top',homeHeaderPadding);
+
+	// set top padding for all other HomeSections
+	var $notTopHomeSections = $('.HomeSection--notTop');
+	$notTopHomeSections.each(function(index, value) {
+		var notTopHomeSectionPadding = ($(this).find('.HomeSection-header').height() + $(this).find('.HomeSection-container').height())/2;
+		$(this).find('.HomeSection-header').css('padding-top',notTopHomeSectionPadding);
+	})
+}
 
 function scrollTo(section){
 	$.scrollify.move("#"+section);
