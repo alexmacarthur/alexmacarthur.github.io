@@ -12,66 +12,70 @@ layout: default
 
       <hr class="HomeSection-divider"></hr>
 
-      <div class="SocialNavHolder">
-        <ul class="SocialNav SocialNav--featured enter-icons">
-          {% include social-menu.html %}
-        </ul>
-      </div>
-
       <div class="SectionsNav SectionsNav--featured">
         {% include primary-menu.html %}
       </div>
 
-      <ul class="SocialNav SocialNav--corner is-invisible">
+    </div>
+
+    <div class="SocialNavHolder">
+      <ul class="SocialNav SocialNav--featured enter-icons">
         {% include social-menu.html %}
       </ul>
+    </div>
 
-      <div class="SectionsNav SectionsNav--corner is-invisible">
-        <a class="SectionsNav-link" href="#top" onclick="return scrollTo(1);">Top</a>
-        {% include primary-menu.html %}
-      </div>
+    <ul class="SocialNav SocialNav--corner is-invisible">
+      {% include social-menu.html %}
+    </ul>
 
-    <div>
+    <div class="SectionsNav SectionsNav--corner is-invisible">
+      <a class="SectionsNav-link" href="#top" onclick="return scrollTo(1);">Top</a>
+      {% include primary-menu.html %}
+    </div>
 
   </section>
 
   <section class="HomeSection HomeSection--notTop HomeSection--about" id="about">
 
-    <h1 class="HomeSection-header">I'm a web developer in Nashville.</h1>
+    <div class="HomeSection-wrapper">
 
-    <div class="HomeSection-container">
+      <h1 class="HomeSection-header">I'm a web developer in Nashville.</h1>
 
-      <hr class="HomeSection-divider"></hr>
-
-      <div class="DescriptionHolder">
-
-        <p class="DescriptionHolder-column">
-          My wife, daughter &amp; I moved here from Minnesota in September, 2015 to work with <a href="http://www.daveramsey.com">Ramsey Solutions</a>.
-        </p>
-
-        <p class="DescriptionHolder-column">
-          My web development career unexpectedly began just a few years earlier when I began self-teaching the basics and dabbling in some freelance web design &amp; development.
-        </p>
-
-         <p class="DescriptionHolder-column">
-          Since then, I've realized I like this stuff and I think I'll keep it up. As time has gone on, I've picked up more &amp; more along the way.
-        </p>
+      <div class="HomeSection-container">
 
         <hr class="HomeSection-divider"></hr>
 
-        <ul class="TechList">
-          <li class="TechList-item">WordPress</li>
-          <li class="TechList-item">PHP</li>
-          <li class="TechList-item">CSS</li>
-          <li class="TechList-item">SASS</li>
-          <li class="TechList-item">JavaScript</li>
-          <li class="TechList-item">jQuery</li>
-          <li class="TechList-item">SQL</li>
-          <li class="TechList-item">Git</li>
-          <li class="TechList-item">Gulp</li>
-          <li class="TechList-item">Jekyll</li>
-          <li class="TechList-item">Magento</li>
-        </ul>
+        <div class="DescriptionHolder">
+
+          <p class="DescriptionHolder-column">
+            My wife, daughter &amp; I moved here from Minnesota in September, 2015 to work with <a href="http://www.daveramsey.com">Ramsey Solutions</a>.
+          </p>
+
+          <p class="DescriptionHolder-column">
+            My web development career unexpectedly began just a few years earlier when I began self-teaching the basics and dabbling in some freelance web design &amp; development.
+          </p>
+
+           <p class="DescriptionHolder-column">
+            Since then, I've realized I like this stuff and I think I'll keep it up. As time has gone on, I've picked up more &amp; more along the way.
+          </p>
+
+          <hr class="HomeSection-divider"></hr>
+
+          <ul class="TechList">
+            <li class="TechList-item">WordPress</li>
+            <li class="TechList-item">PHP</li>
+            <li class="TechList-item">CSS</li>
+            <li class="TechList-item">SASS</li>
+            <li class="TechList-item">JavaScript</li>
+            <li class="TechList-item">jQuery</li>
+            <li class="TechList-item">SQL</li>
+            <li class="TechList-item">Git</li>
+            <li class="TechList-item">Gulp</li>
+            <li class="TechList-item">Jekyll</li>
+            <li class="TechList-item">Magento</li>
+          </ul>
+
+        </div>
 
       </div>
 
@@ -81,132 +85,100 @@ layout: default
 
   <section class="HomeSection HomeSection--notTop HomeSection--work" id="work">
 
-    <h1 class="HomeSection-header">I've designed &amp; built websites and tools.</h1>
+    <div class="HomeSection-wrapper">
 
-    <div class="HomeSection-container HomeSection-container">
+      <h1 class="HomeSection-header">I design &amp; build websites and tools.</h1>
 
-      <hr class="HomeSection-divider"></hr>
+      <div class="HomeSection-container HomeSection-container">
 
-      <!--
-        - Marshall Radio
-        - TilgrY
-        - Lifewall
-        - Lyon County Republicans
-        - jQuery: TypeIt
-      -->
+        <hr class="HomeSection-divider"></hr>
 
-      <div class="WorkList">
-        <div class="WorkList-item">
-          <h3 class="WorkList-title">Marshall Radio</h3>
-          <a class="WorkList-link" href="http://www.marshallradio.net" >marshallradio.net</a>
-          <p class="WorkList-description">
-            Wordpress website designed, built, and &amp; optimized for a radio station in Marshall, MN.
-          </p>
+        <div class="WorkList">
+          <div class="WorkList-item">
+            <h3 class="WorkList-title">Marshall Radio</h3>
+            <a class="WorkList-link" href="http://www.marshallradio.net" >marshallradio.net</a>
+            <p class="WorkList-description">
+              Wordpress website designed, built, and &amp; optimized for a radio station in Marshall, MN.
+            </p>
+          </div>
+          <div class="WorkList-item">
+            <h3 class="WorkList-title">TilgrY</h3>
+            <a class="WorkList-link" href="http://www.tilgry.org" >tilgry.org</a>
+            <p class="WorkList-description">
+              Wordpress website designed, built, and &amp; optimized for a non-profit based in Burkina Faso.
+            </p>
+          </div>
+          <div class="WorkList-item">
+            <h3 class="WorkList-title">Lyon County Republicans</h3>
+            <a class="WorkList-link" href="http://www.lyoncountygop.org">lyoncountygop.org</a>
+            <p class="WorkList-description">
+              Wordpress website designed, built, and &amp; optimized for the Lyon County Republicans in Marshall, MN.
+            </p>
+          </div>
+          <div class="WorkList-item">
+            <h3 class="WorkList-title">Lifewall</h3>
+            <a class="WorkList-link" href="http://www.yourlifewall.com">yourlifewall.com</a>
+            <p class="WorkList-description">
+              Magento ecommerce website built for a startup large format printing company.
+            </p>
+          </div>
+          <div class="WorkList-item">
+            <h3 class="WorkList-title">jQuery: TypeIt</h3>
+            <a class="WorkList-link" href="http://www.macarthur.me/typeit">macarthur.me/typeit</a>
+            <p class="WorkList-description">
+              Magento ecommerce website built for a startup large format printing company.
+            </p>
+          </div>
         </div>
-        <div class="WorkList-item">
-          <h3 class="WorkList-title">TilgrY</h3>
-          <a class="WorkList-link" href="http://www.tilgry.org" >tilgry.org</a>
-          <p class="WorkList-description">
-            Wordpress website designed, built, and &amp; optimized for a non-profit based in Burkina Faso.
-          </p>
-        </div>
-        <div class="WorkList-item">
-          <h3 class="WorkList-title">Lyon County Republicans</h3>
-          <a class="WorkList-link" href="http://www.lyoncountygop.org">lyoncountygop.org</a>
-          <p class="WorkList-description">
-            Wordpress website designed, built, and &amp; optimized for the Lyon County Republicans in Marshall, MN.
-          </p>
-        </div>
-        <div class="WorkList-item">
-          <h3 class="WorkList-title">Lifewall</h3>
-          <a class="WorkList-link" href="http://www.yourlifewall.com">yourlifewall.com</a>
-          <p class="WorkList-description">
-            Magento ecommerce website built for a startup large format printing company.
-          </p>
-        </div>
-        <div class="WorkList-item">
-          <h3 class="WorkList-title">jQuery: TypeIt</h3>
-          <a class="WorkList-link" href="http://www.macarthur.me/typeit">macarthur.me/typeit</a>
-          <p class="WorkList-description">
-            Magento ecommerce website built for a startup large format printing company.
-          </p>
-        </div>
+
+        <ul class="SliderButtons">
+          <li>
+            <a class="SliderButtons-button" id="slickPrevious"><i class="fa fa-angle-left"></i></a>
+          </li>
+          <li>
+            <a class="SliderButtons-button" id="slickNext"><i class="fa fa-angle-right"></i></a>
+          </li>
+        </ul>
+
+        <p class="HomeSection-description">
+          Want help building something? <a href="#" onclick="return scrollTo(4);">Just ask.</a>
+        </p>
+
       </div>
-
-      <ul class="SliderButtons">
-        <li>
-          <a class="SliderButtons-button" id="slickPrevious"><i class="fa fa-angle-left"></i></a>
-        </li>
-        <li>
-          <a class="SliderButtons-button" id="slickNext"><i class="fa fa-angle-right"></i></a>
-        </li>
-      </ul>
-
-      <p class="HomeSection-description">
-        Looking for help on a project on your own? <a href="/ask">Just ask.</a>
-      </p>
 
     </div>
 
   </section>
 
-<!--   <section class="HomeSection HomeSection--thoughts" id="thoughts">
+  <section class="HomeSection HomeSection--notTop HomeSection--contact" id="contact">
 
-    <h1 class="HomeSection-header">I have thoughts on things.</h1>
+    <div class="HomeSection-wrapper">
 
-    <div class="HomeSection-container">
+      <h1 class="HomeSection-header">Get in touch with me.</h1>
 
-      <hr class="HomeSection-divider"></hr>
+      <div class="HomeSection-container">
 
-      <p class="HomeSection-description">
-        View them at your own risk.
-      </p>
+        <hr class="HomeSection-divider"></hr>
 
-      <ul class="FeatureBlocks FeatureBlocks--thoughts">
-        <li class="FeatureBlocks-block FeatureBlocks-block--thoughts">
+        <p class="HomeSection-description">
+          Questions about getting a website or tool built? Something else? LMK.
+        </p>
 
-        </li>
+        <div id="StatusMessages">
+        </div>
 
-        <li class="FeatureBlocks-block FeatureBlocks-block--thoughts">
+        <form id="ContactForm" class="ContactForm" action="//formspree.io/alex@macarthur.me" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="_replyto" placeholder="Email Address" required>
+            <textarea name="message" placeholder="Enter your message."></textarea>
+          <!--   <button>Submit</button> -->
+            <input class="ContactForm-submit" type="submit" value="Submit">
+        </form>
 
-        </li>
-
-        <li class="FeatureBlocks-block FeatureBlocks-block--thoughts">
-
-        </li>
-      </ul>
-
-      <a href="HomeSection-learnMore" href="#">read more of my thoughts</a>
+      </div>
 
     </div>
 
-  </section> -->
-
-<section class="HomeSection HomeSection--notTop HomeSection--contact" id="contact">
-
-  <h1 class="HomeSection-header">Get in touch with me.</h1>
-
-  <div class="HomeSection-container">
-
-    <hr class="HomeSection-divider"></hr>
-
-    <p class="HomeSection-description">
-      Questions about getting a website or tool built? Something else? LMK.
-    </p>
-
-    <div id="StatusMessages">
-    </div>
-
-    <form id="ContactForm" class="ContactForm" action="//formspree.io/alex@macarthur.me" method="POST">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="_replyto" placeholder="Email Address" required>
-        <textarea name="message" placeholder="Enter your message."></textarea>
-      <!--   <button>Submit</button> -->
-        <input class="ContactForm-submit" type="submit" value="Submit">
-    </form>
-
-  </div>
-
-</section>
+  </section>
 
 </main>

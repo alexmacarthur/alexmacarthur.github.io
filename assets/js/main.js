@@ -5,11 +5,6 @@ $(document).ready(function(){
 
 	$('.HomeSection').css('min-height',viewportHeight);
 
-	topPadding();
-	$(window).resize(function(){
-		topPadding();
-	});
-
 	$('.HomeHeader').typeIt({
 		typeSpeed: 125,
 	  	whatToType: ["Hi, I'm Alex MacArthur."]
@@ -33,6 +28,7 @@ $(document).ready(function(){
 		prevArrow: $('#slickPrevious'),
     nextArrow: $('#slickNext'),
 		speed: 100,
+		easing: 'swing',
 		responsive: [
 		{
 			breakpoint: 992,
@@ -53,18 +49,20 @@ $(document).ready(function(){
 
 	$('#ContactForm').submit(function(e){
 		e.preventDefault();
+		$('#StatusMessages').removeClass('failure success');
+
 		$.ajax({
 		    url: "//formspree.io/alex@macarthur.me",
 		    method: "POST",
-		    data: {message: "hello!"},
+		    data: {
+					message: "hello!"
+				},
 		    dataType: "json"
 		}).done(function(response) {
-      // Clear the form.
       $('input[name="name"]').val('');
       $('input[name="_replyto"]').val('');
       $('textarea[name="message"]').val('');
 
-      $('.ContactForm-submit').prop('disabled', true);
       $('#StatusMessages').html('Your message was successfully sent! Thanks.').removeClass('failure').addClass('success');
     }).fail(function(data) {
     	$('#StatusMessages').html('Sorry, an something\'s messed up. Refresh the page to try again, or just send an email to alex@macarthur.me.').removeClass('success').addClass('failure');
@@ -72,20 +70,6 @@ $(document).ready(function(){
 	});
 
 });
-
-function topPadding() {
-	// set top padding for first (main) HomeSection
-	var $homeHeader = $('.HomeSection--main .HomeSection-container');
-	var homeHeaderPadding = ($(window).height() - $homeHeader.height())/2;
-	$homeHeader.css('padding-top',homeHeaderPadding);
-
-	// set top padding for all other HomeSections
-	var $notTopHomeSections = $('.HomeSection--notTop');
-	$notTopHomeSections.each(function(index, value) {
-		var notTopHomeSectionPadding = ($(this).find('.HomeSection-header').height() + $(this).find('.HomeSection-container').height())/2;
-		$(this).find('.HomeSection-header').css('padding-top',notTopHomeSectionPadding);
-	})
-}
 
 function scrollTo(section){
 	$.scrollify.move("#"+section);

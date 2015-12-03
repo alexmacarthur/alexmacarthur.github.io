@@ -421,6 +421,12 @@ th {
   clear: both;
 }
 
+.HomeSection--main .HomeSection-container, .HomeSection-wrapper {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .Main--home {
   text-align: center;
 }
@@ -505,11 +511,8 @@ textarea {
   border-radius: 3px;
   padding: .75rem 1rem;
   border: 1px solid rgba(128, 128, 128, 0.25);
-}
-
-input,
-textarea {
   margin-bottom: 1.5rem;
+  cursor: text;
 }
 
 input::-webkit-input-placeholder,
@@ -571,12 +574,8 @@ p {
   overflow: hidden;
 }
 
-.HomeSection--main .HomeSection-container {
-  padding-top: 15rem;
-}
-
-.HomeSection-header {
-  padding-top: 5rem;
+.HomeSection-wrapper {
+  position: relative;
 }
 
 .HomeSection-container {
@@ -584,6 +583,7 @@ p {
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 
 .HomeSection-container--wide {

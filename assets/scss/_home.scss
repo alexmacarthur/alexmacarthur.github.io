@@ -7,12 +7,13 @@
 	overflow: hidden;
 
 	.HomeSection-container {
-		padding-top: 15rem;
+		@extend %vertical-align;
 	}
 }
 
-.HomeSection-header {
-	padding-top: 5rem;
+.HomeSection-wrapper {
+	@extend %vertical-align;
+	position: relative;
 }
 
 .HomeSection-container {
@@ -20,6 +21,7 @@
 	max-width: 960px;
   margin: 0 auto;
   text-align: center;
+	position: relative;
 }
 
 .HomeSection-container--wide {
