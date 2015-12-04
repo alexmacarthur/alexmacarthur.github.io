@@ -1,32 +1,84 @@
 var viewportHeight = $(window).height();
+var heightIssue = false;
 
 $(document).ready(function(){
-	var splitHeight = viewportHeight/$('.HomeSection').length;
 
-	$('.HomeSection').css('min-height',viewportHeight);
+	$('#top').css('height', viewportHeight);
 
+	// check if any of the HomeSections are taller than the viewport
+	checkForHeightIssue();
+
+	// initilize snap scrolling
+	if(heightIssue !== true){
+		initScrollify();
+	}
+
+	$(window).resize(function(){
+		//$('#main').removeClass('has-height-issue');
+
+		// check if any of the HomeSections are taller than the viewport
+		checkForHeightIssue();
+
+		// initilize snap scrolling
+		if(heightIssue !== true){
+			initScrollify();
+		}
+	});
+
+	// initialize TypeIt
+	initTypeIt();
+
+	// set the color of the appropriate menu item, based on where we are on the page
+	initCurrentMenuLink();
+
+	// initialize the portfolio slider
+	initSlick();
+
+	// set up contact form functionality
+	initContactForm();
+
+});
+
+function checkForHeightIssue() {
+	var $homeSections = $('.HomeSection--notTop');
+	$homeSections.each(function(){
+		var thisHeight = $(this).find('.HomeSection-wrapper').height();
+		if(thisHeight >= viewportHeight){
+			heightIssue = true;
+			$('#main').addClass('has-height-issue');
+		}
+	});
+}
+
+function initTypeIt() {
 	$('.HomeHeader').typeIt({
 		typeSpeed: 125,
-	  	whatToType: ["Hi, I'm Alex MacArthur."]
+			whatToType: ["Hi, I'm Alex MacArthur."]
 	}, function(){
 		$('.SocialNav-item').addClass('animation-popup');
 	});
+}
 
+function initScrollify() {
 	$.scrollify({
-	    section : ".HomeSection"
+			section : ".HomeSection"
 	});
+}
 
+function initCurrentMenuLink() {
 	currentMenuLink();
 	$(window).scroll(function() {
 		currentMenuLink();
 	});
+}
 
+function initSlick() {
 	$('.WorkList').slick({
-	  infinite: false,
-	  slidesToShow: 3,
-	  slidesToScroll: 3,
+		infinite: false,
+		slidesToShow: 3,
+		slidesToScroll: 3,
 		prevArrow: $('#slickPrevious'),
-    nextArrow: $('#slickNext'),
+		nextArrow: $('#slickNext'),
 		speed: 100,
 		easing: 'swing',
 		responsive: [
@@ -46,30 +98,38 @@ $(document).ready(function(){
 		},
 	]
 	});
+}
 
+function initContactForm() {
 	$('#ContactForm').submit(function(e){
 		e.preventDefault();
-		$('#StatusMessages').removeClass('failure success');
+		var $formName = $('#formName');
+		var $formEmail = $('#formEmail');
+		var $formMessage = $('#formMessage');
+		var $statusMessages = $('#StatusMessages');
+
+		$statusMessages.removeClass('failure success');
 
 		$.ajax({
-		    url: "//formspree.io/alex@macarthur.me",
-		    method: "POST",
-		    data: {
-					message: "hello!"
+				url: "//formspree.io/alex@macarthur.me",
+				method: "POST",
+				data: {
+					name: $formName.val(),
+					email: $formEmail.val(),
+					message: $formMessage.val(),
 				},
-		    dataType: "json"
+				dataType: "json"
 		}).done(function(response) {
-      $('input[name="name"]').val('');
-      $('input[name="_replyto"]').val('');
-      $('textarea[name="message"]').val('');
+			$formName.val('');
+			$formEmail.val('');
+			$formMessage.val('');
 
-      $('#StatusMessages').html('Your message was successfully sent! Thanks.').removeClass('failure').addClass('success');
-    }).fail(function(data) {
-    	$('#StatusMessages').html('Sorry, an something\'s messed up. Refresh the page to try again, or just send an email to alex@macarthur.me.').removeClass('success').addClass('failure');
-    });
+			$statusMessages.html('Your message was successfully sent! Thanks.').removeClass('failure').addClass('success');
+		}).fail(function(data) {
+			$statusMessages.html('Sorry, an something\'s messed up. Refresh the page to try again, or just send an email to alex@macarthur.me.').removeClass('success').addClass('failure');
+		});
 	});
-
-});
+}
 
 function scrollTo(section){
 	$.scrollify.move("#"+section);

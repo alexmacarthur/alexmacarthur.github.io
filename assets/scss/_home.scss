@@ -176,15 +176,18 @@
 }
 
 .TechList-item {
-	display: inline;
-    padding: 0 1rem;
-    line-height: 3rem;
-    font-family: 'Josefin Sans', sans-serif;
+	display: inline-block;
+	float: left;
+	width: 33.333%;
+  padding: 0 1rem;
+  line-height: 3rem;
+  font-family: 'Josefin Sans', sans-serif;
+	text-align: center;
 	text-transform: uppercase;
 
-	&:before {
-		padding-right: 0.45rem;
-		font: normal normal normal 14px/1 FontAwesome;
-	    content: "\f00c";
-	}
+	// &:before {
+	// 	padding-right: 0.45rem;
+	// 	font: normal normal normal 14px/1 FontAwesome;
+	//   content: "\f00c";
+	// }
 }

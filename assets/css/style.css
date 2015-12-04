@@ -505,6 +505,16 @@ th {
   padding: 1rem;
 }
 
+.has-height-issue .HomeSection {
+  padding: 2rem 0;
+}
+
+.has-height-issue .HomeSection-wrapper {
+  top: auto;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 input,
 textarea {
   width: 100%;
@@ -562,7 +572,7 @@ a {
 }
 
 p {
-  line-height: 2.5rem;
+  line-height: 2.85rem;
 }
 
 .HomeSection {
@@ -737,17 +747,14 @@ p {
 }
 
 .TechList-item {
-  display: inline;
+  display: inline-block;
+  float: left;
+  width: 33.333%;
   padding: 0 1rem;
   line-height: 3rem;
   font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
   text-transform: uppercase;
-}
-
-.TechList-item:before {
-  padding-right: 0.45rem;
-  font: normal normal normal 14px/1 FontAwesome;
-  content: "\f00c";
 }
 
 .WorkList {

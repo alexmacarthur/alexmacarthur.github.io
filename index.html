@@ -58,16 +58,14 @@ layout: default
 
           <ul class="TechList">
             <li class="TechList-item">WordPress</li>
+            <li class="TechList-item">Magento</li>
             <li class="TechList-item">PHP</li>
-            <li class="TechList-item">CSS</li>
-            <li class="TechList-item">SASS</li>
-            <li class="TechList-item">JavaScript</li>
-            <li class="TechList-item">jQuery</li>
+            <li class="TechList-item">CSS, SASS</li>
+            <li class="TechList-item">JavaScript, jQuery</li>
             <li class="TechList-item">SQL</li>
             <li class="TechList-item">Git</li>
             <li class="TechList-item">Gulp</li>
             <li class="TechList-item">Jekyll</li>
-            <li class="TechList-item">Magento</li>
           </ul>
 
         </div>
@@ -167,9 +165,9 @@ layout: default
         </div>
 
         <form id="ContactForm" class="ContactForm" action="//formspree.io/alex@macarthur.me" method="POST">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="_replyto" placeholder="Email Address" required>
-            <textarea name="message" placeholder="Enter your message."></textarea>
+            <input id="formName" type="text" name="name" placeholder="Name" required>
+            <input id="formEmail" type="email" name="_replyto" placeholder="Email Address" required>
+            <textarea id="formMessage" name="message" placeholder="Enter your message."></textarea>
             <input class="ContactForm-submit" type="submit" value="Submit">
         </form>
 

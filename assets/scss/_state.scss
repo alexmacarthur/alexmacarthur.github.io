@@ -35,3 +35,13 @@
 		padding: 1rem;
 	}
 }
+
+.has-height-issue {
+	.HomeSection {
+		padding: 2rem 0;
+	}
+	.HomeSection-wrapper {
+		top: auto;
+		transform: translateY(0);
+	}
+}
