@@ -506,7 +506,7 @@ th {
 }
 
 .has-height-issue .HomeSection {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 .has-height-issue .HomeSection-wrapper {
@@ -549,8 +549,19 @@ textarea:focus {
 h1,
 h2,
 h3,
-h4 {
+h4,
+span {
   font-family: 'Josefin Sans', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 4rem;
+}
+
+span {
+  line-height: 100%;
 }
 
 a {
@@ -578,6 +589,7 @@ p {
 .HomeSection {
   text-align: center;
   position: relative;
+  padding: 0 1rem;
 }
 
 .HomeSection--main {
@@ -711,12 +723,30 @@ p {
   opacity: .75;
 }
 
+@media screen and (max-width: 600px) {
+  .SocialNav--corner {
+    background: rgba(0, 0, 255, 0.6);
+    width: 100%;
+    left: 0;
+    bottom: 5rem;
+  }
+}
+
 .SectionsNav--corner {
   display: block;
   position: fixed;
   bottom: 2rem;
   left: 2rem;
   z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .SectionsNav--corner {
+    background: rgba(0, 0, 255, 0.6);
+    width: 100%;
+    bottom: 1rem;
+    left: 0;
+  }
 }
 
 .SectionsNav--featured {
@@ -737,9 +767,28 @@ p {
   padding-left: .5rem;
 }
 
+@media screen and (max-width: 600px) {
+  .SectionsNav-link:not(:last-child):after {
+    content: '';
+    padding: 0;
+  }
+}
+
 .SectionsNav-link:hover {
   opacity: 1;
   color: #E56B70;
+}
+
+@media screen and (max-width: 600px) {
+  .SectionsNav-link {
+    display: inline-block;
+    line-height: 2.5rem;
+    padding: 0 1rem;
+  }
+}
+
+.SubHeader {
+  font-weight: bold;
 }
 
 .TechList {

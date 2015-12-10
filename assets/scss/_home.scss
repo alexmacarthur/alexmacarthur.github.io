@@ -1,6 +1,7 @@
 .HomeSection {
 	text-align: center;
 	position: relative;
+	padding: 0 1rem;
 }
 
 .HomeSection--main {
@@ -138,6 +139,13 @@
 	.SocialNav-item {
 		opacity: .75;
 	}
+
+	@include media($mobile) {
+		background: rgba(blue, .6);
+	    width: 100%;
+	    left: 0;
+	    bottom: 5rem;
+	}
 }
 
 .SectionsNav--corner {
@@ -146,6 +154,13 @@
     bottom: 2rem;
     left: 2rem;
     z-index: 1;
+
+    @include media($mobile) {
+    	background: rgba(blue, .6);
+    	width: 100%;
+    	bottom: 1rem;
+    	left: 0;
+    }
 }
 
 .SectionsNav--featured {
@@ -163,12 +178,27 @@
 		color: black;
 		display: inline-block;
 		padding-left: .5rem;
+
+		@include media($mobile) {
+			content: '';
+			padding: 0;
+		}
 	}
 
 	&:hover {
 		opacity: 1;
 		color: $pink;
 	}
+
+	@include media($mobile) {
+		display: inline-block;
+	    line-height: 2.5rem;
+	    padding: 0 1rem;
+	}
+}
+
+.SubHeader {
+	font-weight: bold;
 }
 
 .TechList {
@@ -179,15 +209,9 @@
 	display: inline-block;
 	float: left;
 	width: 33.333%;
-  padding: 0 1rem;
-  line-height: 3rem;
-  font-family: 'Josefin Sans', sans-serif;
+  	padding: 0 1rem;
+  	line-height: 3rem;
+  	font-family: 'Josefin Sans', sans-serif;
 	text-align: center;
 	text-transform: uppercase;
-
-	// &:before {
-	// 	padding-right: 0.45rem;
-	// 	font: normal normal normal 14px/1 FontAwesome;
-	//   content: "\f00c";
-	// }
 }

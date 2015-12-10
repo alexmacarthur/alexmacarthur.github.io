@@ -1,8 +1,19 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+span {
 	font-family: 'Josefin Sans', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 4rem;
+}
+
+span {
+	line-height: 100%;
 }
 
 a{
@@ -19,7 +30,7 @@ a{
 
 p,
 li,
-a {
+a{
 	font-family: 'Merriweather', serif;
 }
 

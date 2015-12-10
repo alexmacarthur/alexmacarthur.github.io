@@ -1,29 +1,37 @@
-var viewportHeight = $(window).height();
+var $window = $(window);
+var $top = $('#top');
+var viewportHeight = $window.height();
+var windowWidth = $window.width();
 var heightIssue = false;
 
 $(document).ready(function(){
 
-	$('#top').css('height', viewportHeight);
-
 	// check if any of the HomeSections are taller than the viewport
 	checkForHeightIssue();
-
 	// initilize snap scrolling
 	if(heightIssue !== true){
 		initScrollify();
 	}
+	// set top section to screen height
+	$top.css('height', viewportHeight);
 
-	$(window).resize(function(){
-		//$('#main').removeClass('has-height-issue');
-
+	$window.resize(function(){
+		// reset viewportHeight & viewportWidth
+		viewportHeight = $window.height();
+		viewportWidth = $window.width();
+		// set top section to screen height
+		$top.css('height', viewportHeight);
 		// check if any of the HomeSections are taller than the viewport
 		checkForHeightIssue();
-
 		// initilize snap scrolling
 		if(heightIssue !== true){
 			initScrollify();
 		}
 	});
+
+	if( windowWidth <= 600){
+		initSmoothScroll();
+	}
 
 	// initialize TypeIt
 	initTypeIt();
@@ -38,6 +46,22 @@ $(document).ready(function(){
 	initContactForm();
 
 });
+
+function initSmoothScroll() {
+	$('.SectionsNav-link').click(function(e) {
+		e.preventDefault();
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+				  scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
+		}
+	});
+}
 
 function checkForHeightIssue() {
 	var $homeSections = $('.HomeSection--notTop');
@@ -67,7 +91,7 @@ function initScrollify() {
 
 function initCurrentMenuLink() {
 	currentMenuLink();
-	$(window).scroll(function() {
+	$window.scroll(function() {
 		currentMenuLink();
 	});
 }
