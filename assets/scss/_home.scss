@@ -1,3 +1,10 @@
+#main {
+	overflow-y: auto;
+  	overflow-x: hidden;
+  	scroll-snap-points-y: repeat(100%);
+  	scroll-snap-type: mandatory;
+}
+
 .HomeSection {
 	text-align: center;
 	position: relative;
