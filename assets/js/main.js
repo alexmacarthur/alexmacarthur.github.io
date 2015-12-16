@@ -7,22 +7,17 @@ var $homeSections = $('.HomeSection');
 
 $(document).ready(function(){
 
-	// check if any of the HomeSections are taller than the viewport
-	// checkForHeightIssue();
-
-	// initilize snap scrolling
-	if(heightIssue !== true){
-		//initScrollify();
-	}
+	initScrollify();
+	
 	// set top section to screen height
-	$homeSections.css('height', viewportHeight);
+	//$homeSections.css('height', viewportHeight);
 
 	$window.resize(function(){
 		// reset viewportHeight & viewportWidth
 		viewportHeight = $window.height();
 		viewportWidth = $window.width();
 		// set top section to screen height
-		$homeSections.css('height', viewportHeight);
+		//$homeSections.css('height', viewportHeight);
 	});
 
 	if( windowWidth <= 600){
@@ -84,11 +79,11 @@ function initTypeIt() {
 	});
 }
 
-// function initScrollify() {
-// 	$.scrollify({
-// 			section : ".HomeSection"
-// 	});
-// }
+function initScrollify() {
+	$.scrollify({
+			section : ".HomeSection"
+	});
+}
 
 function initCurrentMenuLink() {
 	currentMenuLink();

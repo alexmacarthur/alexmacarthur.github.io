@@ -455,7 +455,6 @@
 				if(window.location.hash===names[i]) {
 					index = i;
 					hasLocation = true;
-					
 				}
 			});
 			
