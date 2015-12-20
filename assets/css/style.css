@@ -720,14 +720,18 @@ p {
   right: 0;
 }
 
-.SocialNav--corner {
+.BottomNav {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  left: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: blue;
+}
+
+.SocialNav--corner {
+  position: relative;
   width: auto;
-  padding: 0;
-  z-index: 1;
+  float: right;
 }
 
 .SocialNav--corner .SocialNav-item {

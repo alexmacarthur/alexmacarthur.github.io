@@ -24,13 +24,17 @@ layout: default
       </ul>
     </div>
 
-    <ul class="SocialNav SocialNav--corner is-invisible">
-      {% include social-menu.html %}
-    </ul>
+    <div class="BottomNav is-invisible">
 
-    <div class="SectionsNav SectionsNav--corner is-invisible">
-      <a class="SectionsNav-link" href="#top" onclick="return scrollTo(1);">Top</a>
-      {% include primary-menu.html %}
+      <ul class="SocialNav SocialNav--corner">
+        {% include social-menu.html %}
+      </ul>
+
+      <div class="SectionsNav SectionsNav--corner">
+        <a class="SectionsNav-link" href="#top" onclick="return scrollTo(1);">Top</a>
+        {% include primary-menu.html %}
+      </div>
+
     </div>
 
   </section>

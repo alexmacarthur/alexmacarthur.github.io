@@ -7,17 +7,10 @@ var $homeSections = $('.HomeSection');
 
 $(document).ready(function(){
 
-	initScrollify();
-	
-	// set top section to screen height
-	//$homeSections.css('height', viewportHeight);
-
+	// on resize, do stuff
 	$window.resize(function(){
-		// reset viewportHeight & viewportWidth
 		viewportHeight = $window.height();
 		viewportWidth = $window.width();
-		// set top section to screen height
-		//$homeSections.css('height', viewportHeight);
 	});
 
 	if( windowWidth <= 600){
@@ -32,6 +25,9 @@ $(document).ready(function(){
 
 	// initialize the portfolio slider
 	initSlick();
+
+	// init scrollify (MUST BE INITIALIZED AFTER initSlick())
+	initScrollify();
 
 	// set up contact form functionality
 	initContactForm();
@@ -81,7 +77,8 @@ function initTypeIt() {
 
 function initScrollify() {
 	$.scrollify({
-			section : ".HomeSection"
+			section : ".HomeSection",
+			sectionName: ""
 	});
 }
 
@@ -168,11 +165,9 @@ function currentMenuLink(){
 	});
 
 	if(mostVisibleID === 'top') {
-		$('.SectionsNav--corner').addClass('is-invisible');
-		$('.SocialNav--corner').addClass('is-invisible');
+		$('.BottomNav').addClass('is-invisible');
 	} else {
-		$('.SectionsNav--corner').removeClass('is-invisible');
-		$('.SocialNav--corner').removeClass('is-invisible');
+		$('.BottomNav').removeClass('is-invisible');
 	}
 
 	$('.SectionsNav-link').removeClass('active-link');
