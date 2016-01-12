@@ -26,9 +26,6 @@ $(document).ready(function(){
 	// initialize the portfolio slider
 	initSlick();
 
-	// init scrollify (MUST BE INITIALIZED AFTER initSlick())
-	initScrollify();
-
 	// set up contact form functionality
 	initContactForm();
 
@@ -146,10 +143,6 @@ function initContactForm() {
 			$statusMessages.html('Sorry, an something\'s messed up. Refresh the page to try again, or just send an email to alex@macarthur.me.').removeClass('success').addClass('failure');
 		});
 	});
-}
-
-function scrollTo(section){
-	//$.scrollify.move("#"+section);
 }
 
 function currentMenuLink(){

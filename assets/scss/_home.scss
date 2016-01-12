@@ -30,6 +30,10 @@
   	margin: 0 auto;
   	text-align: center;
 	position: relative;
+
+	@include media($mobile) {
+	    padding-bottom: 7rem;
+	}
 }
 
 .HomeSection-container--wide {
@@ -139,38 +143,39 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background: blue;
+	background: rgba(white, .75);
+	height: 5.5rem;
+	z-index: 1;
+	border-top: 1px solid rgba(black, .15);
 }
 
 .SocialNav--corner {
 	position: relative;
 	width: auto;
 	float: right;
+    margin-right: 2rem;
 
 	.SocialNav-item {
 		opacity: .75;
+		display: block;
+		float: left;
+	    margin-top: 1.25rem;
 	}
 
 	@include media($mobile) {
-		background: rgba(blue, .6);
-	    width: 100%;
-	    left: 0;
-	    bottom: 5rem;
+		display: none;
 	}
 }
 
 .SectionsNav--corner {
 	display: block;
-    position: fixed;
-    bottom: 2rem;
-    left: 2rem;
-    z-index: 1;
+    position: relative;
+    float: left;
+    margin: 1.55rem 0 0 2rem;
 
     @include media($mobile) {
-    	background: rgba(blue, .6);
     	width: 100%;
-    	bottom: 1rem;
-    	left: 0;
+    	margin: 1.55rem 0;
     }
 }
 
