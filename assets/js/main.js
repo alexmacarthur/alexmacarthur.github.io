@@ -26,6 +26,8 @@ $(document).ready(function(){
 	// initialize the portfolio slider
 	initSlick();
 
+	initScrollify();
+
 	// set up contact form functionality
 	initContactForm();
 
