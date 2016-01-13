@@ -9,6 +9,14 @@
 	text-align: center;
 	position: relative;
 	padding: 0 1rem;
+
+	@include media($mobile) {
+	    padding: 1rem;
+
+		&:nth-child(2n) {
+			background: rgba(gray, .075);
+		}
+	}
 }
 
 .HomeSection--main {
@@ -19,9 +27,20 @@
 	}
 }
 
+.HomeSection--contact {
+	@include media($mobile) {
+		padding-bottom: 6rem;
+	}
+}
+
 .HomeSection-wrapper {
 	@extend %vertical-align;
 	position: relative;
+
+	@include media($mobile) {
+		top: auto;
+		transform: translate(0);
+	}
 }
 
 .HomeSection-container {
@@ -30,10 +49,6 @@
   	margin: 0 auto;
   	text-align: center;
 	position: relative;
-
-	@include media($mobile) {
-	    padding-bottom: 7rem;
-	}
 }
 
 .HomeSection-container--wide {
@@ -67,154 +82,6 @@
 
 .HomeHeader {
 	margin: 0;
-}
-
-.SocialNav {
-	list-style: none;
-	display: inline-block;
-    margin-top: 0;
-	position: absolute;
-	width: 100%;
-	left: 0;
-	bottom: 0;
-	margin: 0;
-	padding: 0 0 3rem;
-}
-
-.SocialNav-item {
-	display: inline;
-	text-align: center;
-  margin-right: 1rem;
-
-    &:last-child {
-    	margin-right: 0;
-    }
-
-	a {
-		color: white;
-		border: 0;
-
-		&:hover {
-			i {
-				color: $pink;
-			}
-		}
-	}
-
-	i {
-		color: black;
-		font-size: 2.4rem;
-	}
-}
-
-.SectionsNav {
-	transition: all 0.1s ease-in-out;
-}
-
-.SocialNavHolder {
-	position: absolute;
-	width: 100%;
-	left: 0;
-	bottom: 10px;
-	text-align: center;
-}
-
-.SocialNav--featured {
-	position: relative;
-	width: 100px;
-
-	.SocialNav-item {
-		position: absolute;
-		bottom: -150%;
-
-	    &:nth-child(1) {
-	    	left: 0;
-	    }
-
-	    &:nth-child(2) {
-	    	left: 50%;
-	    	transform: translateX(-50%);
-	    }
-
-	    &:nth-child(3) {
-	    	right: 0;
-	    }
-	}
-}
-
-.BottomNav {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	background: rgba(white, .75);
-	height: 5.5rem;
-	z-index: 1;
-	border-top: 1px solid rgba(black, .15);
-}
-
-.SocialNav--corner {
-	position: relative;
-	width: auto;
-	float: right;
-    margin-right: 2rem;
-
-	.SocialNav-item {
-		opacity: .75;
-		display: block;
-		float: left;
-	    margin-top: 1.25rem;
-	}
-
-	@include media($mobile) {
-		display: none;
-	}
-}
-
-.SectionsNav--corner {
-	display: block;
-    position: relative;
-    float: left;
-    margin: 1.55rem 0 0 2rem;
-
-    @include media($mobile) {
-    	width: 100%;
-    	margin: 1.55rem 0;
-    }
-}
-
-.SectionsNav--featured {
-	width: 100%;
-	text-align: center;
-}
-
-.SectionsNav-link {
-	color: black;
-	opacity: .75;
-	border: 0;
-
-	&:not(:last-child):after {
-		content: '/';
-		color: black;
-		display: inline-block;
-		padding-left: .5rem;
-
-		@include media($mobile) {
-			content: '';
-			padding: 0;
-		}
-	}
-
-	&:hover {
-		opacity: 1;
-		color: $pink;
-	}
-
-	@include media($mobile) {
-		display: inline-block;
-	    line-height: 2.5rem;
-	    padding: 0 1rem;
-	}
 }
 
 .SubHeader {

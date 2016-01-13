@@ -46,7 +46,7 @@ gulp.task('jshint',function(){
 gulp.task('scripts', function() {
   gulp.src(['assets/js/typeit.js','assets/js/scrollify.js','assets/js/fracs.js','assets/js/main.js'])
     .pipe(concat('scripts.js'))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('assets/js'));
 });
 

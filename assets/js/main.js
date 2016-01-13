@@ -1,9 +1,11 @@
+
+// cached variables
 var $window = $(window);
 var $top = $('#top');
+var $main = $('#main');
+var $homeSections = $('.HomeSection', $main);
 var viewportHeight = $window.height();
-var windowWidth = $window.width();
-var heightIssue = false;
-var $homeSections = $('.HomeSection');
+var viewportWidth = $window.width();
 
 $(document).ready(function(){
 
@@ -11,11 +13,8 @@ $(document).ready(function(){
 	$window.resize(function(){
 		viewportHeight = $window.height();
 		viewportWidth = $window.width();
+		initScrollify();
 	});
-
-	if( windowWidth <= 600){
-		initSmoothScroll();
-	}
 
 	// initialize TypeIt
 	initTypeIt();
@@ -26,10 +25,14 @@ $(document).ready(function(){
 	// initialize the portfolio slider
 	initSlick();
 
+	// initlize the scroll-snapping plugin
 	initScrollify();
 
 	// set up contact form functionality
 	initContactForm();
+
+	// set up smooth scrolling
+	initSmoothScroll();
 
 });
 
@@ -49,36 +52,36 @@ function initSmoothScroll() {
 	});
 }
 
-function checkForHeightIssue() {
-	var $homeSections = $('.HomeSection--notTop');
-	$homeSections.each(function(){
-		var thisHeight = $(this).find('.HomeSection-wrapper').height();
-
-		console.log('Section: ' + thisHeight);
-		console.log('VP: ' + viewportHeight);
-
-		if(thisHeight >= viewportHeight){
-			console.log($(this).find('.HomeSection-wrapper'));
-			heightIssue = true;
-			$('#main').addClass('has-height-issue');
-		}
-	});
-}
-
 function initTypeIt() {
-	$('.HomeHeader').typeIt({
+	$('#homeHeader').typeIt({
 		typeSpeed: 125,
 			whatToType: ["Hi, I'm Alex MacArthur."]
 	}, function(){
-		$('.SocialNav-item').addClass('animation-popup');
+		$('.SocialNav-item', '.SocialNav').addClass('animation-popup');
 	});
 }
 
 function initScrollify() {
-	$.scrollify({
-			section : ".HomeSection",
-			sectionName: ""
-	});
+	// if using desktop/tablet, init scrollify if not already initialized
+	if(viewportWidth > 600) {
+		if(!$main.hasClass('scrollify-enabled')) {
+			$.scrollify({
+				section : ".HomeSection",
+				sectionName: ""
+			});
+			$main.addClass('scrollify-enabled');
+		}
+	// if not already destroyed, destroy it
+	} else {
+		if($main.hasClass('scrollify-enabled')) {
+			$.scrollify.destroy();
+			$main.removeClass('scrollify-enabled');
+		}
+		// set each HomeSection to auto height
+		$homeSections.css('height', 'auto');
+		// set top HomeSection to explicit height
+		$top.css('height', viewportHeight);
+	}
 }
 
 function initCurrentMenuLink() {
@@ -89,7 +92,7 @@ function initCurrentMenuLink() {
 }
 
 function initSlick() {
-	$('.WorkList').slick({
+	$('#workList').slick({
 		infinite: false,
 		slidesToShow: 3,
 		slidesToScroll: 3,
