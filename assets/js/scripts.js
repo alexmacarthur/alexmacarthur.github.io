@@ -803,6 +803,8 @@ var $window = $(window);
 var $top = $('#top');
 var $main = $('#main');
 var $homeSections = $('.HomeSection', $main);
+var $menuToggle = $('#menuToggle');
+var $menuItemsWrapper = $('#menuItemsWrapper');
 var viewportHeight = $window.height();
 var viewportWidth = $window.width();
 
@@ -833,7 +835,16 @@ $(document).ready(function(){
 	// set up smooth scrolling
 	initSmoothScroll();
 
+	// init mobile menu
+	initMobileMenu();
+
 });
+
+function initMobileMenu() {
+	$menuToggle.on('click', function() {
+		$menuItemsWrapper.toggleClass('is-open');
+	});
+}
 
 function initSmoothScroll() {
 	$('.SectionsNav-link').click(function(e) {

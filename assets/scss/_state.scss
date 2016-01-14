@@ -45,3 +45,9 @@
 		transform: translateY(0);
 	}
 }
+
+#menuItemsWrapper {
+	&.is-open {
+		max-height: 500px;
+	}
+}

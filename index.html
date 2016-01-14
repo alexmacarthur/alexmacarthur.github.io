@@ -31,8 +31,11 @@ layout: default
       </ul>
 
       <div class="SectionsNav SectionsNav--corner">
-        <a class="SectionsNav-link" href="#top" onclick="return scrollTo(1);">Top</a>
-        {% include primary-menu.html %}
+        <span id="menuToggle">Menu</span>
+        <div class="MenuItemsWrapper" id="menuItemsWrapper">
+          <a class="SectionsNav-link" href="#top" onclick="return scrollTo(1);">Top</a>
+          {% include primary-menu.html %}
+        </div>
       </div>
 
     </div>
@@ -52,7 +55,10 @@ layout: default
         <div class="DescriptionHolder">
 
           <p>
-            My wife, daughter, &amp; I moved here from Minnesota in September, 2015 to work for <a href="http://www.daveramsey.com">Dave Ramsey</a>. Prior to that, my web development career began unexpectedly when I self-taught the basics after college. Since then, I've enjoyed learning as quickly as I can, working on a variety of freelance projects along the way (see just a few below).
+            Prior to that, I was a just a young dude with no idea of what to do with his life. Thankfully, that didn't last long. My web development career began to bud when I started self-teaching the basics while working for a start-up printing company. I shortly realized I love this stuff too much to not do it full-time.
+          </p>
+          <p>
+            In September, 2015, my wife, daughter, &amp; I began a new exciting chapter of our lives and moved here from Minnesota to work for <a href="http://www.daveramsey.com">Dave Ramsey</a>. As time goes by, I've only come to love my "jobs" more and more&ndash;husband, dad, web developer, in that order. 
           </p>
           <p>
             My approach to web development prides keeping things light, efficient, and well-organized. You won't see my projects using a standard, off-the-shelf theme that's tweaked a little bit, or an overbloated drag &amp; drop solution that kills performance and SEO. If we're going to build something, we're going to build it right, performant, and effective.
@@ -98,7 +104,7 @@ layout: default
             <h3 class="WorkList-title">Marshall Radio</h3>
             <a class="WorkList-link" href="http://www.marshallradio.net" >marshallradio.net</a>
             <p class="WorkList-description">
-              Wordpress website designed, built, and &amp; optimized for a radio station in Marshall, MN.
+              Custom website designed, built, and &amp; optimized for a radio station in Marshall, MN.
             </p>
           </div>
           <div class="WorkList-item">
@@ -112,7 +118,7 @@ layout: default
             <h3 class="WorkList-title">TilgrY</h3>
             <a class="WorkList-link" href="http://www.tilgry.org" >tilgry.org</a>
             <p class="WorkList-description">
-              Wordpress website designed, built, and &amp; optimized for a non-profit based in Burkina Faso.
+              Custom website designed, built, and &amp; optimized for a non-profit based in Burkina Faso.
             </p>
           </div>
           <div class="WorkList-item">
@@ -126,7 +132,7 @@ layout: default
             <h3 class="WorkList-title">Lifewall</h3>
             <a class="WorkList-link" href="http://www.yourlifewall.com">yourlifewall.com</a>
             <p class="WorkList-description">
-              Magento ecommerce website built for a startup large format printing company.
+              Custom ecommerce website built for a startup large format printing company.
             </p>
           </div>
         </div>

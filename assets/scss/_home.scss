@@ -89,6 +89,7 @@
 }
 
 .TechList {
+	@extend %clearfix;
 	text-align: center;
 }
 
@@ -101,4 +102,10 @@
   	font-family: 'Josefin Sans', sans-serif;
 	text-align: center;
 	text-transform: uppercase;
+
+	@include media($mobile) {
+		width: auto;
+		float: none;
+		display: block;
+	}
 }
