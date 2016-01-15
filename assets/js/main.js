@@ -6,6 +6,9 @@ var $main = $('#main');
 var $homeSections = $('.HomeSection', $main);
 var $menuToggle = $('#menuToggle');
 var $menuItemsWrapper = $('#menuItemsWrapper');
+var $bottomNav = $('#bottomNav', $main);
+var $mostVisible = $('#top');
+var mostVisibleID = 'top';
 var viewportHeight = $window.height();
 var viewportWidth = $window.width();
 
@@ -163,20 +166,16 @@ function initContactForm() {
 
 function currentMenuLink(){
 
-	var sections = $('.HomeSection');
-	var mostVisible = $('#top');
-	var mostVisibleID = 'top';
-
 	// grabs each section and checks for most percentage on screen
-	$.each(sections, function() {
-		mostVisible = $(this).fracs().visible > mostVisible.fracs().visible ? $(this) : mostVisible;
-		mostVisibleID = mostVisible.attr('id');
+	$.each(homeSections, function() {
+		$mostVisible = $(this).fracs().visible > $mostVisible.fracs().visible ? $(this) : $mostVisible;
+		mostVisibleID = $mostVisible.attr('id');
 	});
 
 	if(mostVisibleID === 'top') {
-		$('.BottomNav').addClass('is-invisible');
+		$bottomNav.addClass('is-invisible');
 	} else {
-		$('.BottomNav').removeClass('is-invisible');
+		$bottomNav.removeClass('is-invisible');
 	}
 
 	$('.SectionsNav-link').removeClass('active-link');
