@@ -6,8 +6,9 @@ var $main = $('#main');
 var $homeSections = $('.HomeSection', $main);
 var $menuToggle = $('#menuToggle');
 var $menuItemsWrapper = $('#menuItemsWrapper');
-var $bottomNav = $('#bottomNav', $main);
+var $bottomNav = $('#bottomNav');
 var $mostVisible = $('#top');
+var $sectionNavLinks = $('.SectionsNav-link');
 var mostVisibleID = 'top';
 var viewportHeight = $window.height();
 var viewportWidth = $window.width();
@@ -171,14 +172,14 @@ function currentMenuLink(){
 		$mostVisible = $(this).fracs().visible > $mostVisible.fracs().visible ? $(this) : $mostVisible;
 		mostVisibleID = $mostVisible.attr('id');
 	});
-
+	
 	if(mostVisibleID === 'top') {
 		$bottomNav.addClass('is-invisible');
 	} else {
 		$bottomNav.removeClass('is-invisible');
 	}
-
-	$('.SectionsNav-link').removeClass('active-link');
+	
+	$sectionNavLinks.removeClass('active-link');
 	$('.SectionsNav-link[href="#' + mostVisibleID + '"]').addClass('active-link');
 
 }
