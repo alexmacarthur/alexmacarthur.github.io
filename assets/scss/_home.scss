@@ -9,6 +9,7 @@
 	text-align: center;
 	position: relative;
 	padding: 0 1rem;
+	height: 50rem;
 
 	@include media($mobile) {
 	    padding: 1rem;
@@ -33,6 +34,11 @@
 	.HomeSection-container {
 		@extend %vertical-align;
 	}
+}
+
+.HomeSection--work {
+	min-height: 50rem;
+    height: auto;
 }
 
 .HomeSection--contact {
