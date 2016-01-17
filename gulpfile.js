@@ -46,14 +46,14 @@ gulp.task('jshint',function(){
 gulp.task('scripts', function() {
   gulp.src(['assets/js/typeit.js','assets/js/scrollify.js','assets/js/fracs.js','assets/js/main.js'])
     .pipe(concat('scripts.js'))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('assets/js'));
 });
 
 // compile sass, reload browser
 gulp.task('sass',function(){
   gulp.src('assets/scss/style.scss')
-    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefix('last 2 versions'))
     .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.reload({stream:true}));

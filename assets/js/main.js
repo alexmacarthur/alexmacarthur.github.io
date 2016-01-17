@@ -1,4 +1,3 @@
-
 // cached variables
 var $window = $(window);
 var $top = $('#top');
@@ -8,7 +7,7 @@ var $menuToggle = $('#menuToggle');
 var $menuItemsWrapper = $('#menuItemsWrapper');
 var $bottomNav = $('#bottomNav', $main);
 var $mostVisible = $('#top', $main);
-var $sectionNavLinks = $('.SectionsNav-link', $menuItemsWrapper);
+var $sectionNavLinks = $('.SectionsNav-link', $main);
 var mostVisibleID = 'top';
 var viewportHeight = $window.height();
 var viewportWidth = $window.width();
@@ -46,13 +45,13 @@ $(document).ready(function(){
 });
 
 function initMobileMenu() {
-	$menuToggle.on('click', function() {
+	$bottomNav.on('click', $menuToggle, function(){
 		$menuItemsWrapper.toggleClass('is-open');
-	});
+	})
 }
 
 function initSmoothScroll() {
-	$('.SectionsNav-link').click(function(e) {
+	$main.on('click', '.SectionsNav-link', function(e) {
 		e.preventDefault();
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
@@ -72,13 +71,13 @@ function initTypeIt() {
 		typeSpeed: 125,
 			whatToType: ["Hi, I'm Alex MacArthur."]
 	}, function(){
-		$('.SocialNav-item', '.SocialNav').addClass('animation-popup');
+		$('.SocialNav-item', $main).addClass('animation-popup');
 	});
 }
 
 function initScrollify() {
 	// if using desktop/tablet, init scrollify if not already initialized
-	if(viewportWidth > 600) {
+	if(viewportWidth > 600 && viewportHeight > 600) {
 		if(!$main.hasClass('scrollify-enabled')) {
 			$.scrollify({
 				section : ".HomeSection",
@@ -145,19 +144,18 @@ function initContactForm() {
 		$statusMessages.removeClass('failure success');
 
 		$.ajax({
-				url: "//formspree.io/alex@macarthur.me",
-				method: "POST",
-				data: {
-					name: $formName.val(),
-					email: $formEmail.val(),
-					message: $formMessage.val(),
-				},
-				dataType: "json"
+			url: "//formspree.io/alex@macarthur.me",
+			method: "POST",
+			data: {
+				name: $formName.val(),
+				email: $formEmail.val(),
+				message: $formMessage.val(),
+			},
+			dataType: "json"
 		}).done(function(response) {
 			$formName.val('');
 			$formEmail.val('');
 			$formMessage.val('');
-
 			$statusMessages.html('Your message was successfully sent! Thanks.').removeClass('failure').addClass('success');
 		}).fail(function(data) {
 			$statusMessages.html('Sorry, an something\'s messed up. Refresh the page to try again, or just send an email to alex@macarthur.me.').removeClass('success').addClass('failure');
@@ -168,7 +166,7 @@ function initContactForm() {
 function currentMenuLink(){
 
 	// grabs each section and checks for most percentage on screen
-	$.each(homeSections, function() {
+	$.each($homeSections, function() {
 		$mostVisible = $(this).fracs().visible > $mostVisible.fracs().visible ? $(this) : $mostVisible;
 		mostVisibleID = $mostVisible.attr('id');
 	});
@@ -179,7 +177,8 @@ function currentMenuLink(){
 		$bottomNav.removeClass('is-invisible');
 	}
 	
+	// remove class from all elements
 	$sectionNavLinks.removeClass('active-link');
-	$('.SectionsNav-link[href="#' + mostVisibleID + '"]').addClass('active-link');
+	$('.SectionsNav-link[href="#' + mostVisibleID + '"]', $main).addClass('active-link');
 
 }

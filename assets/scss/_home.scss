@@ -17,6 +17,14 @@
 			background: rgba(gray, .075);
 		}
 	}
+
+	@include media-height($short-screen) {
+	    padding: 1rem;
+
+		&:nth-child(2n) {
+			background: rgba(gray, .075);
+		}
+	}
 }
 
 .HomeSection--main {
@@ -38,6 +46,11 @@
 	position: relative;
 
 	@include media($mobile) {
+		top: auto;
+		transform: translate(0);
+	}
+
+	@include media-height($short-screen) {
 		top: auto;
 		transform: translate(0);
 	}

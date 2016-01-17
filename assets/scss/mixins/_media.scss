@@ -3,3 +3,10 @@
         @content;
     }
 }
+
+@mixin media-height($device) {
+    @media screen and (max-height: $device) {
+        @content;
+    }
+}
+
