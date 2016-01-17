@@ -14,6 +14,8 @@ var viewportWidth = $window.width();
 
 $(document).ready(function(){
 
+	$('#body').removeClass('no-js');
+
 	// on resize, do stuff
 	$window.resize(function(){
 		viewportHeight = $window.height();
@@ -77,7 +79,7 @@ function initTypeIt() {
 
 function initScrollify() {
 	// if using desktop/tablet, init scrollify if not already initialized
-	if(viewportWidth > 600 && viewportHeight > 600) {
+	if(viewportWidth > 600 && viewportHeight > 500) {
 		if(!$main.hasClass('scrollify-enabled')) {
 			$.scrollify({
 				section : ".HomeSection",

@@ -19,6 +19,7 @@
 }
 
 .SliderButtons {
+	@extend %clearfix;
 
 	li {
 		display: inline;

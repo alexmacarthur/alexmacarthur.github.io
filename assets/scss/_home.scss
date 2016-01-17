@@ -122,3 +122,17 @@
 		display: block;
 	}
 }
+
+a {
+	&:hover {
+		svg, 
+		svg path {
+			fill: $pink;
+		}
+	}
+}
+
+svg {
+	max-width: 100%;
+	max-height: 100%;
+}
