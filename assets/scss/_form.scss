@@ -13,13 +13,13 @@ textarea {
 
 	&:focus {
 		outline: none;
-		box-shadow: 0 0 1px 1px rgba($pink, .25);
+		box-shadow: 0 0 1px 1px rgba($pink, .35);
 	}
 }
 
 .ContactForm-submit{
 	background: white;
-	border: 1px solid rgba(gray, .25);
+	border: 1px solid rgba(gray, .35);
 
 	&:hover{
 		background: $pink;

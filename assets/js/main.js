@@ -23,25 +23,18 @@ $(document).ready(function(){
 		initScrollify();
 	});
 
-	// initialize TypeIt
 	initTypeIt();
 
-	// set the color of the appropriate menu item, based on where we are on the page
 	initCurrentMenuLink();
 
-	// initialize the portfolio slider
 	initSlick();
 
-	// initlize the scroll-snapping plugin
 	initScrollify();
 
-	// set up contact form functionality
 	initContactForm();
 
-	// set up smooth scrolling
 	initSmoothScroll();
 
-	// init mobile menu
 	initMobileMenu();
 
 });
@@ -53,15 +46,19 @@ function initMobileMenu() {
 }
 
 function initSmoothScroll() {
-	$main.on('click', '.SectionsNav-link', function(e) {
+	$main.on('click', '.SectionsNav-link, #justAsk', function(e) {
 		e.preventDefault();
+		var theID = $(this).attr('href');
+
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
 				$('html,body').animate({
 				  scrollTop: target.offset().top
-				}, 1000);
+				}, 1000, function() {
+					window.location.hash = theID;
+				});
 				return false;
 			}
 		}
@@ -78,7 +75,6 @@ function initTypeIt() {
 }
 
 function initScrollify() {
-	// if using desktop/tablet, init scrollify if not already initialized
 	if(viewportWidth > 600 && viewportHeight > 500) {
 		if(!$main.hasClass('scrollify-enabled')) {
 			$.scrollify({
@@ -87,15 +83,14 @@ function initScrollify() {
 			});
 			$main.addClass('scrollify-enabled');
 		}
-	// if not already destroyed, destroy it
 	} else {
 		if($main.hasClass('scrollify-enabled')) {
 			$.scrollify.destroy();
 			$main.removeClass('scrollify-enabled');
 		}
-		// set each HomeSection to auto height
+		
 		$homeSections.css('height', 'auto');
-		// set top HomeSection to explicit height
+		
 		$top.css('height', viewportHeight);
 	}
 }
@@ -167,7 +162,6 @@ function initContactForm() {
 
 function currentMenuLink(){
 
-	// grabs each section and checks for most percentage on screen
 	$.each($homeSections, function() {
 		$mostVisible = $(this).fracs().visible > $mostVisible.fracs().visible ? $(this) : $mostVisible;
 		mostVisibleID = $mostVisible.attr('id');
@@ -179,8 +173,7 @@ function currentMenuLink(){
 		$bottomNav.removeClass('is-invisible');
 	}
 	
-	// remove class from all elements
 	$sectionNavLinks.removeClass('active-link');
-	$('.SectionsNav-link[href="#' + mostVisibleID + '"]', $main).addClass('active-link');
+	$main.find('.SectionsNav-link[href="#' + mostVisibleID + '"]').addClass('active-link');
 
 }
