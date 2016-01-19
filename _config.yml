@@ -14,3 +14,4 @@ twitter_username: amacarthur
 github_username:  alexmacarthur
 markdown: kramdown
 exclude: [node_modules, gulpfile.js, Gemfile, Gemfile.lock, package.json]
+minify_html: true

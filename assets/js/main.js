@@ -66,7 +66,7 @@ function initSmoothScroll() {
 }
 
 function initTypeIt() {
-	$('#homeHeader').typeIt({
+	$('#homeHeader', $top).typeIt({
 		typeSpeed: 125,
 			whatToType: ["Hi, I'm Alex MacArthur."]
 	}, function(){
@@ -103,7 +103,7 @@ function initCurrentMenuLink() {
 }
 
 function initSlick() {
-	$('#workList').slick({
+	$('#workList', '#work').slick({
 		infinite: false,
 		slidesToShow: 3,
 		slidesToScroll: 3,
@@ -131,7 +131,7 @@ function initSlick() {
 }
 
 function initContactForm() {
-	$('#ContactForm').submit(function(e){
+	$('#ContactForm', '#contact').submit(function(e){
 		e.preventDefault();
 		var $formName = $('#formName');
 		var $formEmail = $('#formEmail');
@@ -162,10 +162,11 @@ function initContactForm() {
 
 function currentMenuLink(){
 
-	$.each($homeSections, function() {
-		$mostVisible = $(this).fracs().visible > $mostVisible.fracs().visible ? $(this) : $mostVisible;
+	for(var i = 0; i < $homeSections.length; i++) {
+		var $currentSection = $($homeSections[i]);
+		$mostVisible = $currentSection.fracs().visible > $mostVisible.fracs().visible ? $currentSection : $mostVisible;
 		mostVisibleID = $mostVisible.attr('id');
-	});
+	}
 	
 	if(mostVisibleID === 'top') {
 		$bottomNav.addClass('is-invisible');
