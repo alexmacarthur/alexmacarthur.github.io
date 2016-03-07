@@ -1,0 +1,5 @@
+<section class="posts">
+{% for post in site.posts %}
+  <li><date>{{ post.date | date: "%B %-d, %Y"}}<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+{% endfor %}
+</section>

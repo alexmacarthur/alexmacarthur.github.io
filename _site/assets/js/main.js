@@ -1,4 +1,3 @@
-// cached variables
 var $window = $(window);
 var $top = $('#top');
 var $main = $('#main');
@@ -14,9 +13,6 @@ var viewportWidth = $window.width();
 
 $(document).ready(function(){
 
-	$('#body').removeClass('no-js');
-
-	// on resize, do stuff
 	$window.resize(function(){
 		viewportHeight = $window.height();
 		viewportWidth = $window.width();
@@ -24,17 +20,11 @@ $(document).ready(function(){
 	});
 
 	initTypeIt();
-
 	initCurrentMenuLink();
-
 	initSlick();
-
 	initScrollify();
-
 	initContactForm();
-
 	initSmoothScroll();
-
 	initMobileMenu();
 
 });
@@ -68,7 +58,7 @@ function initSmoothScroll() {
 function initTypeIt() {
 	$('#homeHeader', $top).typeIt({
 		typeSpeed: 125,
-			whatToType: ["Hi, I'm Alex MacArthur."]
+		whatToType: ["Hi, I'm Alex MacArthur."]
 	}, function(){
 		$('.SocialNav-item', $main).addClass('animation-popup');
 	});

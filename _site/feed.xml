@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Alex MacArthur | Nashville Web Developer</title>
+    <title>Alex MacArthur | Web Developer in Nashville</title>
     <description>Alex is a front-end developer from MN, relocated to Nashville, TN.</description>
     <link>alexmacarthur.github.io/</link>
     <atom:link href="alexmacarthur.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Jan 2016 13:07:16 -0600</pubDate>
-    <lastBuildDate>Tue, 19 Jan 2016 13:07:16 -0600</lastBuildDate>
+    <pubDate>Mon, 07 Mar 2016 07:36:28 -0600</pubDate>
+    <lastBuildDate>Mon, 07 Mar 2016 07:36:28 -0600</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -34,6 +34,50 @@
         <category>jekyll</category>
         
         <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Mopeding Through a Minnesota Winter</title>
+        <description>&lt;p&gt;I’m sitting here with a pounding head, soar throat, and all the disgusting rest of the package. I really wish I could play the innocence card and draw pity… but I don’t deserve it.&lt;/p&gt;
+
+&lt;p&gt;Why?&lt;/p&gt;
+
+&lt;p&gt;I’ve been riding around in near-freezing weather on a 50cc moped.&lt;/p&gt;
+
+&lt;p&gt;This is the first sniffle (ha.) in my plan to ride him as long as snow is off the road. My hope is that my body will develop an immunity to get me through this winter, and my riding habits won’t have to be reconsidered. Or worse… eliminated. &lt;/p&gt;
+
+&lt;p&gt;Assuming all goes well, here’s my beginner’s plan to weather-proof myself and my moped. &lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;3-inch layer of clothing covering every square inch of my body.&lt;/strong&gt; 
+3 inches may be an exaggeration, but you get it. Snow pants, winter coat, sweatshirt, hat, scarf, I’ll need it all. I’ve experimented with this in pouring rain and cold temps. It worked well! The only problem was water seeping through, which will be less of a problem in the winter. (BECAUSE IT DOESN’T RAIN IN THE WINTER. Usually.)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;My moped becomes a house pet.&lt;/strong&gt; 
+Our garage is pretty warm, even in the winter, so storing my moped in there overnight will hopefully keep it start-able in the brisk morning.  At work, you can bet I’ll try to convince Jacob &amp;amp; Maxx to let me roll in my moped. There are clear advantages to this over a pet. No peeing on the carpet, no obligation to play with it, and it’s quiet. There’s no good reason to say turn me down on this.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;If needed, I tuck him in with an electric blanket.&lt;/strong&gt; 
+In the dead of winter, not even a sort-of insulated garage will be able to ward off Jack Frost. I’ve done my deep web forum research, and very credible anonymous sources say electric blankets work great. Good enough for me. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Chains for his tires.&lt;/strong&gt; 
+Consider these the gloves for his delicate hands. I’m looking into this one. More to come. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Adjust fuel/air ratio screw.&lt;/strong&gt; 
+Yeah, I don’t know about that one. Like, anything. Just read it somewhere and it topped the list off @ 5 things.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Need your help: If you’ve spent a winter mopeding around town and have some helpful tips, let me know.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 Oct 2013 00:00:00 -0500</pubDate>
+        <link>alexmacarthur.github.io/2013/10/23/mopeding-through-a-minnesota-winter.html</link>
+        <guid isPermaLink="true">alexmacarthur.github.io/2013/10/23/mopeding-through-a-minnesota-winter.html</guid>
+        
         
       </item>
     
