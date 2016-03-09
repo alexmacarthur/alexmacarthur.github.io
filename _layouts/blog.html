@@ -1,5 +1,14 @@
-<section class="posts">
-{% for post in site.posts %}
-  <li><date>{{ post.date | date: "%B %-d, %Y"}}<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-{% endfor %}
-</section>
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body id="body" class="no-js">
+
+    {{ content }}
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>
