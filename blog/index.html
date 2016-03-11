@@ -2,12 +2,36 @@
 layout: blog
 ---
 
-<main class="main" id="blogMain">
+<header>
 
-	<section class="posts">
-	{% for post in site.posts %}
-	  <li><date>{{ post.date | date: "%B %-d, %Y"}}<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-	{% endfor %}
-	</section>
+	<div class="Container Container--nav">
+		<div class="Wrapper">
+			{% include primary-menu.html %}
+		</div>
+	</div>
+
+</header>
+
+<main class="main Main-page" id="blogMain">
+
+	<div class="Container">
+
+		<section class="posts">
+			{% for post in site.posts %}
+			  	<article>
+			  		<date>{{ post.date | date: "%B %-d, %Y"}}</date>
+			  		<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+			  		<div class="Excerpt">
+			  			{{ post.content | strip_html | truncatewords:75}}
+			  		</div>
+			  	</article>
+			{% endfor %}
+		</section>
+
+	</div>
 
 </main>
+
+<footer>
+
+</footer>
