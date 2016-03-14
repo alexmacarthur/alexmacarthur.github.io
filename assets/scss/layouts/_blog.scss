@@ -1,0 +1,49 @@
+.Article {
+	padding: 3rem 0;
+
+	h3 {
+		text-align: center;
+		font-weight: 100;
+
+		a {
+			border: 0;
+			color: rgba(black, .8);
+			font-family: 'Josefin Sans', sans-serif;
+			text-transform: uppercase;
+    		font-size: 2.5rem;
+    		letter-spacing: 2px;
+		}
+	}
+
+	p {
+		font-size: 1.75rem;
+	    font-weight: 100;
+	    line-height: 3.25rem;
+	}
+}
+
+.Article-title {
+	text-align: center;
+	position: relative;
+
+	date {
+	    text-align: center;
+	    display: inline-block;
+	    background: white;
+	    bottom: -4rem;
+	    padding: 0 3rem;
+	    position: absolute;
+    	left: 50%;
+    	transform: translateX(-50%);
+	}
+}
+
+.Article-body {
+	width: 80%;
+    margin: 0 auto;
+    max-width: 768px;
+}
+
+.Article-excerpt {
+	text-align: center;
+}

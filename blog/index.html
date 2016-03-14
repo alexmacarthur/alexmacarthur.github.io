@@ -4,11 +4,11 @@ layout: blog
 
 <header>
 
-	<div class="Container Container--nav">
+<!-- 	<div class="Container Container--nav">
 		<div class="Wrapper">
 			{% include primary-menu.html %}
 		</div>
-	</div>
+	</div> -->
 
 </header>
 
@@ -18,11 +18,18 @@ layout: blog
 
 		<section class="posts">
 			{% for post in site.posts %}
-			  	<article>
-			  		<date>{{ post.date | date: "%B %-d, %Y"}}</date>
-			  		<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-			  		<div class="Excerpt">
-			  			{{ post.content | strip_html | truncatewords:75}}
+			  	<article class="Article">
+			  		<div class="Article-title">
+				  		<h3>
+				  			<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				  		</h3>
+				  		<date>{{ post.date | date: "%B %-d, %Y"}}</date>
+			  		</div>
+			  		<hr class="Divider Divider--article">
+			  		<div class="Article-body Article-excerpt">
+						<p>
+			  				{{ post.content | strip_html | truncatewords:75}}
+			  			</p>
 			  		</div>
 			  	</article>
 			{% endfor %}

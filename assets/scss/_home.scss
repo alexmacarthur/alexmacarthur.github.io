@@ -74,17 +74,6 @@
 	max-width: 100%;
 }
 
-.HomeSection-divider {
-	border: 2px dashed rgba(black, .1);
-    max-width: 500px;
-    width: 90%;
-    margin: 3rem auto;
-
-    @include media($tablet) {
-        margin: 1.5rem auto;
-    }
-}
-
 .DescriptionHolder {
 	@extend %clearfix;
     margin-bottom: 4rem;

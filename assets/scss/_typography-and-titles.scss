@@ -3,7 +3,7 @@ h2,
 h3,
 h4,
 span {
-	font-family: 'Josefin Sans', sans-serif;
+	@extend %josefin-sans;
 }
 
 h1,
@@ -11,10 +11,19 @@ h2,
 h3 {
 	line-height: 4rem;
     margin: 2rem 0;
+    letter-spacing: 2px;
+    @extend %text-color;
 
     @include media($tablet) {
         margin: 1.5rem 0;
     }
+}
+
+date {
+	@extend %text-color;
+	@extend %josefin-sans;
+	color: rgba(black, .25);
+	text-transform: uppercase;
 }
 
 h1 {
@@ -49,9 +58,21 @@ a{
 
 p {
     line-height: 2.85rem;
+    @extend %text-color;
 
     @include media($tablet) {
         font-size: 1.40rem;
     	line-height: 2.35rem;
+    }
+}
+
+.Divider {
+	border: 2px dashed rgba(black, .1);
+    max-width: 500px;
+    width: 90%;
+    margin: 3rem auto;
+
+    @include media($tablet) {
+        margin: 1.5rem auto;
     }
 }
