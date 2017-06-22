@@ -13,13 +13,19 @@
 	position: relative;
 }
 
+#statusMessages,
+#ContactForm {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
 #StatusMessages {
 	position: relative;
 	max-height: 0;
-    border-radius: 3px;
-    color: white;
-    margin-bottom: 1rem;
-    font-weight: 100;
+	border-radius: 3px;
+	color: white;
+	margin-bottom: 1rem;
+	font-weight: 100;
 
 	&.success {
 		transition: all .15s ease-in-out;

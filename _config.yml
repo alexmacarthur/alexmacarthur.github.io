@@ -8,8 +8,8 @@
 title: Alex MacArthur | Nashville Web Developer
 email: alex@macarthur.me
 description: "Alex is a front-end developer from MN, relocated to Nashville, TN."
-baseurl: "" 
-url: "alexmacarthur.github.io" 
+baseurl: ""
+url: "https://macarthur.me"
 twitter_username: amacarthur
 github_username:  alexmacarthur
 markdown: kramdown
