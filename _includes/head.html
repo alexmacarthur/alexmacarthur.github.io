@@ -7,15 +7,32 @@
   <meta name="author" content="Alex MacArthur">
   <meta property="og:title" content="Alex MacArthur: Web Developer in Nashville" />
   <meta property="og:url" content="http://macarthur.me" />
-
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
+  <meta name="google-site-verification" content="j-Rgj8f6KfZUw7Fpk49vs7Jl5jmTjX9PqXr4rMf3cW4"/>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "ProfessionalService",
+      "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nashville",
+      "addressRegion": "TN"
+      },
+        "image" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAASZAAAAJGI5NDJiMTg5LWI3YmYtNDg1OC1hNjE1LTg1ZmMzNzFjYmJhMQ.jpg",
+      "email": "alex@macarthur.me",
+      "description": "Alex MacArthur is a freelance web developer in Nashville, available to help with your next web project.",
+      "name": "Alex MacArthur | Web Developer in Nashville",
+      "sameAs" : [ "http://www.twitter.com/amacarthur", "https://www.linkedin.com/in/alexmacarthur", "https://github.com/alexmacarthur"],
+        "telephone" : "507-476-1414",
+        "priceRange" : "$500 - $10000"
+    }
+  </script>
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
   <link rel="stylesheet" href="{{ "assets/css/style.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 
 </head>
