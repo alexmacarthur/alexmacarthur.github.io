@@ -1,17 +1,24 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
+---
 title: Alex MacArthur | Nashville Web Developer
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 email: alex@macarthur.me
-description: "Alex is a front-end developer from MN, relocated to Nashville, TN."
-baseurl: ""
-url: "https://macarthur.me"
+description: Alex is a front-end developer from MN, relocated to Nashville, TN.
+baseurl: ''
+url: https://macarthur.me
 twitter_username: amacarthur
-github_username:  alexmacarthur
+github_username: alexmacarthur
 markdown: kramdown
-exclude: [node_modules, gulpfile.js, Gemfile, Gemfile.lock, package.json]
+exclude:
+- node_modules
+- gulpfile.js
+- Gemfile
+- Gemfile.lock
+- package.json
 minify_html: true
