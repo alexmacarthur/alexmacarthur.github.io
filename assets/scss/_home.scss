@@ -1,18 +1,19 @@
 #main {
 	overflow-y: auto;
-  	overflow-x: hidden;
-  	scroll-snap-points-y: repeat(100%);
-  	scroll-snap-type: mandatory;
+	overflow-x: hidden;
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100%);
 }
 
 .HomeSection {
 	text-align: center;
 	position: relative;
 	padding: 0 1rem;
-	height: 50rem;
+	height: 100vh;
+	border-top: 4px solid rgba(black, .1);
 
 	@include media($mobile) {
-	    padding: 1rem;
+	  padding: 1rem;
 
 		&:nth-child(2n) {
 			background: rgba(gray, .075);
@@ -34,11 +35,6 @@
 	.HomeSection-container {
 		@extend %vertical-align;
 	}
-}
-
-.HomeSection--work {
-	min-height: 50rem;
-    height: auto;
 }
 
 .HomeSection--contact {
@@ -131,7 +127,7 @@
 
 a {
 	&:hover {
-		svg, 
+		svg,
 		svg path {
 			fill: $pink;
 		}

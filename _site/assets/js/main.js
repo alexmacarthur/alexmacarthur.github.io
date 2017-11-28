@@ -20,7 +20,6 @@ $(document).ready(function(){
 	$window.resize(function(){
 		viewportHeight = $window.height();
 		viewportWidth = $window.width();
-		initScrollify();
 	});
 
 	initTypeIt();
@@ -28,8 +27,6 @@ $(document).ready(function(){
 	initCurrentMenuLink();
 
 	initSlick();
-
-	initScrollify();
 
 	initContactForm();
 
@@ -43,6 +40,27 @@ function initMobileMenu() {
 	$bottomNav.on('click', $menuToggle, function(){
 		$menuItemsWrapper.toggleClass('is-open');
 	})
+}
+
+function initScrollify() {
+	if(viewportWidth > 600 && viewportHeight > 500) {
+		if(!$main.hasClass('scrollify-enabled')) {
+			$.scrollify({
+				section : ".HomeSection",
+				sectionName: ""
+			});
+			$main.addClass('scrollify-enabled');
+		}
+	} else {
+		if($main.hasClass('scrollify-enabled')) {
+			$.scrollify.destroy();
+			$main.removeClass('scrollify-enabled');
+		}
+
+		$homeSections.css('height', 'auto');
+
+		$top.css('height', viewportHeight);
+	}
 }
 
 function initSmoothScroll() {
@@ -74,27 +92,6 @@ function initTypeIt() {
 	});
 }
 
-function initScrollify() {
-	if(viewportWidth > 600 && viewportHeight > 500) {
-		if(!$main.hasClass('scrollify-enabled')) {
-			$.scrollify({
-				section : ".HomeSection",
-				sectionName: ""
-			});
-			$main.addClass('scrollify-enabled');
-		}
-	} else {
-		if($main.hasClass('scrollify-enabled')) {
-			$.scrollify.destroy();
-			$main.removeClass('scrollify-enabled');
-		}
-		
-		$homeSections.css('height', 'auto');
-		
-		$top.css('height', viewportHeight);
-	}
-}
-
 function initCurrentMenuLink() {
 	currentMenuLink();
 	$window.scroll(function() {
@@ -103,7 +100,10 @@ function initCurrentMenuLink() {
 }
 
 function initSlick() {
-	$('#workList', '#work').slick({
+
+	var $sliders = $('#workList', '#work');
+
+	$sliders.slick({
 		infinite: false,
 		slidesToShow: 3,
 		slidesToScroll: 3,
@@ -128,6 +128,7 @@ function initSlick() {
 		},
 	]
 	});
+
 }
 
 function initContactForm() {
@@ -167,13 +168,13 @@ function currentMenuLink(){
 		$mostVisible = $currentSection.fracs().visible > $mostVisible.fracs().visible ? $currentSection : $mostVisible;
 		mostVisibleID = $mostVisible.attr('id');
 	}
-	
+
 	if(mostVisibleID === 'top') {
 		$bottomNav.addClass('is-invisible');
 	} else {
 		$bottomNav.removeClass('is-invisible');
 	}
-	
+
 	$sectionNavLinks.removeClass('active-link');
 	$main.find('.SectionsNav-link[href="#' + mostVisibleID + '"]').addClass('active-link');
 
